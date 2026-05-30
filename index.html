@@ -75,4 +75,403 @@
       display: grid;
       grid-template-columns: 1.4fr 0.8fr;
       gap: 2rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #082f49;
+      border-color: var(--accent);
+    }
+
+    .profile-card {
+      background: linear-gradient(180deg, var(--card-light), var(--card));
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+    }
+
+    .profile-card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .profile-card ul {
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .profile-card li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .skill-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+    }
+
+    .skill-box h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .skill-box p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .experience-item {
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .experience-item h3 {
+      margin-bottom: 0.25rem;
+    }
+
+    .experience-item p {
+      color: var(--muted);
+    }
+
+    .contact-card {
+      background: linear-gradient(180deg, var(--card-light), var(--card));
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 3rem;
+      }
+
+      .grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        align-items: flex-start;
+        gap: 0.75rem;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Ian Merriman</div>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <span class="badge">Aerospace Engineering Portfolio</span>
+        <h1>GNC, flight dynamics, simulation, and space vehicle design.</h1>
+        <p>
+          I am an aerospace engineering student at the University of Texas at Arlington interested in guidance, navigation, controls, flight dynamics, and space vehicle simulation. This portfolio highlights my technical projects, analysis work, leadership experience, and engineering documentation.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button" href="Resume.pdf" target="_blank">View Resume</a>
+          <a class="button" href="https://github.com/ianmerriman" target="_blank">GitHub</a>
+          <a class="button" href="https://www.linkedin.com/in/ian-merriman" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <h2>Focus Areas</h2>
+        <ul>
+          <li>Guidance, Navigation, and Controls</li>
+          <li>Flight Dynamics and Simulation</li>
+          <li>Stability and Control</li>
+          <li>Trajectory Analysis</li>
+          <li>Rocketry and Aerospace Systems</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="projects" class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-intro">
+        Selected aerospace projects focused on vehicle analysis, simulation, controls, requirements, and technical documentation.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Reverse Engineering the Grumman X-29</h3>
+          <p>
+            Stability and control analysis of a forward-swept wing aircraft, including neutral point, static margin, trim considerations, and aircraft configuration evaluation.
+          </p>
+          <div class="tag-list">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Stability & Control</span>
+            <span class="tag">Aircraft Design</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Trajectory Simulation Requirements</h3>
+          <p>
+            Requirements and verification planning for a rocket navigation trajectory simulation, including inputs, outputs, assumptions, and testable requirement structure.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Systems Engineering</span>
+            <span class="tag">Trajectory</span>
+            <span class="tag">Verification</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>IMU-to-Servo TVC Testbed</h3>
+          <p>
+            Early-stage thrust vector control practice project using an IMU and micro-servo to explore sensor-to-actuator control logic and feedback behavior.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Controls</span>
+            <span class="tag">IMU</span>
+            <span class="tag">Python</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Monte Carlo Dispersion Demo</h3>
+          <p>
+            Planned simulation project exploring how uncertainty in vehicle parameters, atmosphere, thrust, or sensor data affects final trajectory outcomes.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Monte Carlo</span>
+            <span class="tag">Simulation</span>
+            <span class="tag">Python</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Lambert Transfer Solver</h3>
+          <p>
+            Planned orbital mechanics project to solve transfer trajectories and estimate mission-relevant outputs such as time of flight and delta-v.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Orbital Mechanics</span>
+            <span class="tag">Astrodynamics</span>
+            <span class="tag">Python</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Rocketry Leadership and Testing</h3>
+          <p>
+            Engineering leadership experience through Aero Mavs, including project coordination, safety discussions, documentation, and rocketry team support.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Leadership</span>
+            <span class="tag">Rocketry</span>
+            <span class="tag">Documentation</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-intro">
+        Technical areas and tools I am building through coursework, senior design, rocketry projects, and independent aerospace simulations.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Programming</h3>
+          <p>Python, MATLAB, Simulink, basic embedded controls practice.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Aerospace Analysis</h3>
+          <p>Flight dynamics, orbital mechanics, stability and control, trajectory analysis.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Engineering Tools</h3>
+          <p>SolidWorks/CAD, GitHub, technical reports, requirements documentation.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Testing & Hardware</h3>
+          <p>Rocketry test planning, 3D printing, hand tools, power tools, sensor-actuator prototypes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="container">
+      <h2 class="section-title">Experience</h2>
+      <p class="section-intro">
+        Academic, project, and leadership experience relevant to aerospace engineering and space systems roles.
+      </p>
+
+      <div class="experience-item">
+        <h3>Aerospace Engineering Student | University of Texas at Arlington</h3>
+        <p>
+          Bachelor of Science in Aerospace Engineering. Coursework and projects focused on aircraft design, flight mechanics, orbital mechanics, controls, aerodynamics, and aerospace systems.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Senior Design: Reverse Engineering the Grumman X-29</h3>
+        <p>
+          Contributed to synthesis and stability/control work for a reverse-engineered aircraft design project, including configuration evaluation, trade studies, and technical documentation.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>President | Aero Mavs</h3>
+        <p>
+          Led a student aerospace organization, supported rocketry project coordination, helped manage team communication, and contributed to technical and safety-focused documentation.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <div class="contact-card">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-intro" style="margin-left:auto; margin-right:auto;">
+          I am interested in internships and entry-level opportunities related to GNC, flight dynamics, simulation, controls, and space vehicle design.
+        </p>
+        <div class="button-row" style="justify-content:center;">
+          <a class="button primary" href="mailto:iandmerriman@yahoo.com">Email Me</a>
+          <a class="button" href="https://github.com/ianmerriman" target="_blank">GitHub</a>
+          <a class="button" href="https://www.linkedin.com/in/ian-merriman" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ian Merriman. Aerospace Engineering Portfolio.</p>
+    </div>
+  </footer>
+</body>
 </html>
