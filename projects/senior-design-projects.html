@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senior Design Projects | Ian Merriman</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card-light: #1f2937;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --border: rgba(148, 163, 184, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9)), url("../NASA_Wallpaper.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(950px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      padding: 1rem 0;
+    }
+
+    .back-link {
+      font-weight: 700;
+    }
+
+    .project-hero {
+      padding: 4rem 0 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 2rem 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 800px;
+    }
+
+    .project-image {
+      width: 100%;
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      margin: 1rem 0;
+      background: var(--card);
+    }
+
+    .image-caption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+    }
+
+    ul {
+      color: var(--muted);
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="back-link" href="../index.html">← Back to Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero container">
+      <span class="badge">Aircraft Design | Stability & Control | Synthesis | Technical Documentation</span>
+      <h1>Senior Design Projects</h1>
+      <p class="lead">
+        Team-based aerospace design work involving vehicle analysis, stability and control, synthesis, trade studies, technical research, and engineering documentation.
+      </p>
+
+      <div class="tag-list">
+        <span class="tag">Aircraft Design</span>
+        <span class="tag">Stability & Control</span>
+        <span class="tag">Synthesis</span>
+        <span class="tag">MATLAB Analysis</span>
+        <span class="tag">Technical Writing</span>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Project Overview</h2>
+      <p>
+        My senior design work focused on the reverse engineering and evaluation of the Grumman X-29, an experimental forward-swept wing aircraft. The project required applying aerospace design methods to understand the aircraft configuration, mission assumptions, stability and control behavior, and vehicle-level trade space.
+      </p>
+
+      <p>
+        This work combined technical research, low-fidelity analysis, MATLAB-based calculations, aircraft design methods, and written documentation. The project helped me practice working as part of a larger design team while contributing discipline-specific analysis in synthesis and stability and control.
+      </p>
+
+      <img class="project-image" src="../images/senior-design-projects-1.png" alt="Senior design project figure or X-29 analysis plot" />
+      <p class="image-caption">
+        Replace this image with an X-29 figure, MATLAB plot, trade study figure, stability and control diagram, or senior design report screenshot.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>My Role</h2>
+      <p>
+        I contributed to the synthesis and stability and control portions of the project. My work involved supporting vehicle-level configuration evaluation, reviewing technical sources, developing analysis methods, and documenting how aircraft geometry and assumptions influenced stability, trim, and control behavior.
+      </p>
+
+      <p>
+        I also helped connect the discipline-level analysis to the broader team design process by organizing findings into report-ready explanations, figures, and technical discussion.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Technical Approach</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Analysis Inputs</h3>
+          <ul>
+            <li>Aircraft geometry and configuration data</li>
+            <li>Mission assumptions and design constraints</li>
+            <li>Wing, canard, and control surface characteristics</li>
+            <li>Mass properties and center-of-gravity assumptions</li>
+            <li>NASA technical reports and aircraft design references</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Analysis Outputs</h3>
+          <ul>
+            <li>Configuration evaluation discussion</li>
+            <li>Static stability and static margin considerations</li>
+            <li>Trim and control authority observations</li>
+            <li>Trade study results and design implications</li>
+            <li>Report-ready technical documentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Engineering Focus Areas</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Synthesis</h3>
+          <ul>
+            <li>Vehicle-level design assumptions</li>
+            <li>Aircraft configuration evaluation</li>
+            <li>Trade study organization</li>
+            <li>Design method interpretation</li>
+            <li>Connection between mission goals and aircraft sizing</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Stability and Control</h3>
+          <ul>
+            <li>Neutral point and static margin concepts</li>
+            <li>Canard aircraft behavior</li>
+            <li>Trim and control authority considerations</li>
+            <li>Relaxed static stability awareness</li>
+            <li>Configuration effects on controllability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Skills Used and Developed</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Aircraft design methods</li>
+            <li>Stability and control analysis</li>
+            <li>MATLAB-based analysis</li>
+            <li>Trade studies</li>
+            <li>Low-fidelity aerospace modeling</li>
+            <li>Technical source interpretation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Professional Skills</h3>
+          <ul>
+            <li>Technical writing</li>
+            <li>Team collaboration</li>
+            <li>Design review communication</li>
+            <li>Engineering documentation</li>
+            <li>Research organization</li>
+            <li>Explaining assumptions and limitations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Selected Project Work</h2>
+      <p>
+        This section can be customized with specific senior design examples, such as neutral point calculations, static margin plots, trim curves, sweep trade studies, synthesis carpet plots, or screenshots from your final report.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Configuration Evaluation</h3>
+          <ul>
+            <li>Studied the effect of the X-29 forward-swept wing layout</li>
+            <li>Connected aircraft geometry to stability and control behavior</li>
+            <li>Used technical references to support configuration assumptions</li>
+            <li>Documented aircraft-level design implications</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Discipline Documentation</h3>
+          <ul>
+            <li>Prepared written explanations of methods and results</li>
+            <li>Organized assumptions, figures, and technical discussion</li>
+            <li>Explained how analysis supported the broader design process</li>
+            <li>Connected discipline work to team-level report deliverables</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>What I Learned</h2>
+      <p>
+        This senior design work strengthened my understanding of how aircraft configuration, geometry, stability, and control are connected. It also helped me see how important assumptions are in early-stage aerospace design, especially when using low-fidelity methods to evaluate a complex vehicle.
+      </p>
+
+      <p>
+        I also learned how to communicate technical analysis in a team setting. A useful engineering result needs to be documented clearly, connected to the project objective, and presented with enough context for other disciplines to use it.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Future Improvements</h2>
+      <p>
+        Future improvements could include expanding the stability and control analysis, adding dynamic mode evaluation, improving trim and control authority modeling, validating against additional NASA flight-test data, and creating a GitHub repository with organized scripts, figures, assumptions, and documentation.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ian Merriman. Aerospace Engineering Portfolio.</p>
+    </div>
+  </footer>
+</body>
+</html>
