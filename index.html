@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ian Merriman | Aerospace Engineering Portfolio</title>
+
   <style>
     :root {
       --bg: #0f172a;
@@ -30,13 +31,13 @@
       background-position: center;
       background-attachment: fixed;
 
-      /* Alternative */
-      
-      /* background:  */
-      /* radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 30%), */
-      /* radial-gradient(circle at top right, rgba(129, 140, 248, 0.14), transparent 28%), */
-      /* linear-gradient(135deg, #020617, #0f172a 50%, #111827); */
-      
+      /* Alternative background option */
+
+      /* background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(129, 140, 248, 0.14), transparent 28%),
+        linear-gradient(135deg, #020617, #0f172a 50%, #111827); */
+
       color: var(--text);
     }
 
@@ -152,6 +153,11 @@
       border: 1px solid var(--border);
     }
 
+    .profile-card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
     .profile-card ul {
       list-style: none;
       color: var(--muted);
@@ -198,6 +204,19 @@
     .card p {
       color: var(--muted);
       font-size: 0.98rem;
+    }
+
+    .project-link {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-link:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      text-decoration: none;
     }
 
     .tag-list {
@@ -289,24 +308,10 @@
       .nav-links {
         flex-wrap: wrap;
       }
-
-      .project-link {
-        color: inherit;
-        text-decoration: none;
-        display: block;
-        transition: transform 0.2s ease, border-color 0.2s ease;
-      }
-    
-      .project-link:hover {
-        transform: translateY(-4px);
-        border-color: var(--accent);
-        text-decoration: none;
-      }  
-
-      
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -330,6 +335,7 @@
         <p>
           I am an aerospace engineering student at the University of Texas at Arlington interested in guidance, navigation, controls, flight dynamics, and space vehicle simulation. This portfolio highlights my technical projects, analysis work, leadership experience, and engineering documentation.
         </p>
+
         <div class="button-row">
           <a class="button primary" href="#projects">View Projects</a>
           <a class="button" href="Resume.pdf" target="_blank">View Resume</a>
@@ -338,96 +344,96 @@
         </div>
       </div>
 
-  <aside class="profile-card">
-    <img src="Headshot.jpg" alt="Headshot of Ian Merriman" class="headshot" />
-  
-    <h2>Focus Areas</h2>
-    <ul>
-      <li>Guidance, Navigation, and Controls</li>
-      <li>Flight Dynamics and Simulation</li>
-      <li>Orbital Mechanics and Astrodynamics</li>
-      <li>Trajectory Analysis and Optimization</li>
-      <li>Rocketry and Spacecraft Systems</li>
-    </ul>
-  </aside>
-      </section>
+      <aside class="profile-card">
+        <img src="Headshot.jpg" alt="Headshot of Ian Merriman" class="headshot" />
+
+        <h2>Focus Areas</h2>
+        <ul>
+          <li>Guidance, Navigation, and Controls</li>
+          <li>Flight Dynamics and Simulation</li>
+          <li>Orbital Mechanics and Astrodynamics</li>
+          <li>Trajectory Analysis and Optimization</li>
+          <li>Rocketry and Spacecraft Systems</li>
+        </ul>
+      </aside>
+    </section>
 
     <section id="projects" class="container">
       <h2 class="section-title">Featured Projects</h2>
       <p class="section-intro">
-        Selected aerospace projects focused on vehicle analysis, simulation, controls, requirements, and technical documentation.
+        Selected aerospace and controls projects that highlight my experience with rocketry, embedded systems, simulation, systems engineering, and technical documentation.
       </p>
 
       <div class="grid">
-        <a class="card project-link" href="projects/x29.html">
-          <h3>Reverse Engineering the Grumman X-29</h3>
+        <a class="card project-link" href="projects/thrust-vectoring-rocket.html">
+          <h3>Thrust-Vectoring Rocket Project</h3>
           <p>
-            Stability and control analysis of a forward-swept wing aircraft, including neutral point, static margin, trim considerations, and aircraft configuration evaluation.
-          </p>
-          <div class="tag-list">
-            <span class="tag">MATLAB</span>
-            <span class="tag">Stability & Control</span>
-            <span class="tag">Aircraft Design</span>
-          </div>
-        </a>
-
-        <a class="card project-link" href="projects/trajectory-requirements.html">
-          <h3>Trajectory Simulation Requirements</h3>
-          <p>
-            Requirements and verification planning for a rocket navigation trajectory simulation, including inputs, outputs, assumptions, and testable requirement structure.
-          </p>
-          <div class="tag-list">
-            <span class="tag">Systems Engineering</span>
-            <span class="tag">Trajectory</span>
-            <span class="tag">Verification</span>
-          </div>
-        </a>
-
-        <a class="card project-link" href="projects/tvc-testbed.html">
-          <h3>IMU-to-Servo TVC Testbed</h3>
-          <p>
-            Early-stage thrust vector control practice project using an IMU and micro-servo to explore sensor-to-actuator control logic and feedback behavior.
+            Early-stage rocket control project using IMU sensor data and servo actuation to explore thrust-vectoring concepts, feedback control, and vehicle attitude response.
           </p>
           <div class="tag-list">
             <span class="tag">Controls</span>
-            <span class="tag">IMU</span>
-            <span class="tag">Python</span>
+            <span class="tag">IMU Integration</span>
+            <span class="tag">Embedded Systems</span>
           </div>
         </a>
 
-        <a class="card project-link" href="projects/monte-carlo.html">
-          <h3>Monte Carlo Dispersion Demo</h3>
+        <a class="card project-link" href="projects/self-balancing-table.html">
+          <h3>Self-Balancing Table Project</h3>
           <p>
-            Planned simulation project exploring how uncertainty in vehicle parameters, atmosphere, thrust, or sensor data affects final trajectory outcomes.
+            Controls-focused prototype designed to practice real-time stabilization using sensor feedback, actuator response, mechanical design, and iterative testing.
           </p>
           <div class="tag-list">
-            <span class="tag">Monte Carlo</span>
-            <span class="tag">Simulation</span>
-            <span class="tag">Python</span>
+            <span class="tag">Control Systems</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">System Integration</span>
           </div>
         </a>
 
-        <a class="card project-link" href="projects/lambert-solver.html">
-          <h3>Lambert Transfer Solver</h3>
+        <a class="card project-link" href="projects/rocketry-projects.html">
+          <h3>Rocketry Projects</h3>
           <p>
-            Planned orbital mechanics project to solve transfer trajectories and estimate mission-relevant outputs such as time of flight and delta-v.
+            Hands-on student rocketry experience involving design support, manufacturing, testing, safety planning, documentation, and team-based engineering work.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Rocketry</span>
+            <span class="tag">Testing</span>
+            <span class="tag">Manufacturing</span>
+          </div>
+        </a>
+
+        <a class="card project-link" href="projects/project-bluespear.html">
+          <h3>Project BlueSpear</h3>
+          <p>
+            Long-term high-altitude rocket concept focused on mission planning, requirements development, launch site research, safety documentation, and systems engineering.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Systems Engineering</span>
+            <span class="tag">Mission Planning</span>
+            <span class="tag">Requirements</span>
+          </div>
+        </a>
+
+        <a class="card project-link" href="projects/astronautics-simulations.html">
+          <h3>Astronautics Simulations</h3>
+          <p>
+            Computational astronautics projects involving orbital mechanics, trajectory analysis, porkchop plots, mission design trade studies, and numerical simulation.
           </p>
           <div class="tag-list">
             <span class="tag">Orbital Mechanics</span>
-            <span class="tag">Astrodynamics</span>
-            <span class="tag">Python</span>
+            <span class="tag">Simulation</span>
+            <span class="tag">MATLAB/Python</span>
           </div>
         </a>
 
-        <a class="card project-link" href="projects/rocketry-leadership.html">
-          <h3>Rocketry Leadership and Testing</h3>
+        <a class="card project-link" href="projects/senior-design-projects.html">
+          <h3>Senior Design Projects</h3>
           <p>
-            Engineering leadership experience through Aero Mavs, including project coordination, safety discussions, documentation, and rocketry team support.
+            Team-based aerospace design work involving vehicle analysis, stability and control, synthesis, trade studies, technical research, and engineering documentation.
           </p>
           <div class="tag-list">
-            <span class="tag">Leadership</span>
-            <span class="tag">Rocketry</span>
-            <span class="tag">Documentation</span>
+            <span class="tag">Aircraft Design</span>
+            <span class="tag">Stability & Control</span>
+            <span class="tag">Technical Writing</span>
           </div>
         </a>
       </div>
@@ -444,14 +450,17 @@
           <h3>Programming</h3>
           <p>Python, MATLAB, Simulink, basic embedded controls practice.</p>
         </div>
+
         <div class="skill-box">
           <h3>Aerospace Analysis</h3>
           <p>Flight dynamics, orbital mechanics, stability and control, trajectory analysis.</p>
         </div>
+
         <div class="skill-box">
           <h3>Engineering Tools</h3>
           <p>SolidWorks/CAD, GitHub, technical reports, requirements documentation.</p>
         </div>
+
         <div class="skill-box">
           <h3>Testing & Hardware</h3>
           <p>Rocketry test planning, 3D printing, hand tools, power tools, sensor-actuator prototypes.</p>
@@ -493,8 +502,9 @@
         <p class="section-intro" style="margin-left:auto; margin-right:auto;">
           I am interested in internships and entry-level opportunities related to GNC, flight dynamics, simulation, and automatic controls.
         </p>
+
         <div class="button-row" style="justify-content:center;">
-          <a class="button primary" href="iandmerriman@yahoo.com">Email Me</a>
+          <a class="button primary" href="mailto:iandmerriman@yahoo.com">Email Me</a>
           <a class="button" href="https://github.com/ianmerriman" target="_blank">GitHub</a>
           <a class="button" href="https://www.linkedin.com/in/ian-merriman" target="_blank">LinkedIn</a>
         </div>
