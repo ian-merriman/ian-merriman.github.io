@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astronautics Simulations | Ian Merriman</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card-light: #1f2937;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --border: rgba(148, 163, 184, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9)), url("../NASA_Wallpaper.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(950px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      padding: 1rem 0;
+    }
+
+    .back-link {
+      font-weight: 700;
+    }
+
+    .project-hero {
+      padding: 4rem 0 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 2rem 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 800px;
+    }
+
+    .project-image {
+      width: 100%;
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      margin: 1rem 0;
+      background: var(--card);
+    }
+
+    .image-caption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+    }
+
+    ul {
+      color: var(--muted);
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="back-link" href="../index.html">← Back to Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero container">
+      <span class="badge">Orbital Mechanics | Simulation | MATLAB/Python | Mission Design</span>
+      <h1>Astronautics Simulations</h1>
+      <p class="lead">
+        Computational astronautics projects involving orbital mechanics, trajectory analysis, porkchop plots, mission design trade studies, and numerical simulation.
+      </p>
+
+      <div class="tag-list">
+        <span class="tag">Orbital Mechanics</span>
+        <span class="tag">Trajectory Analysis</span>
+        <span class="tag">Mission Design</span>
+        <span class="tag">MATLAB/Python</span>
+        <span class="tag">Data Visualization</span>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Project Overview</h2>
+      <p>
+        My astronautics simulation projects focus on using computational tools to model orbital mechanics problems and mission design concepts. These projects helped me connect classroom theory to practical analysis by turning equations, assumptions, and mission constraints into simulations and visual results.
+      </p>
+
+      <p>
+        Examples of this work include trajectory studies, orbital transfer analysis, porkchop plots, and mission planning trade studies. These simulations strengthened my understanding of how spacecraft motion, transfer timing, and delta-v requirements influence mission design.
+      </p>
+
+      <img class="project-image" src="../images/astronautics-simulations-1.png" alt="Astronautics simulation plot or porkchop plot" />
+      <p class="image-caption">
+        Replace this image with a porkchop plot, trajectory plot, orbital transfer diagram, or simulation result.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>My Role</h2>
+      <p>
+        I developed and analyzed simulations to better understand orbital mechanics, transfer trajectories, and mission planning decisions. My work involved setting up the problem, defining assumptions, implementing the simulation, generating plots, and interpreting the engineering meaning of the results.
+      </p>
+
+      <p>
+        These projects helped me practice the type of computational analysis used in space mission design, including breaking down a large astronautics problem into inputs, equations, outputs, and visual results.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Technical Approach</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Simulation Inputs</h3>
+          <ul>
+            <li>Initial and final orbital conditions</li>
+            <li>Departure and arrival timing assumptions</li>
+            <li>Planetary or body parameters</li>
+            <li>Time of flight ranges</li>
+            <li>Mission constraints and simplifying assumptions</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Simulation Outputs</h3>
+          <ul>
+            <li>Trajectory plots</li>
+            <li>Transfer timing comparisons</li>
+            <li>Delta-v estimates</li>
+            <li>Porkchop plot visualizations</li>
+            <li>Mission design trade study results</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Analysis Methods</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Orbital Mechanics Concepts</h3>
+          <ul>
+            <li>Two-body motion</li>
+            <li>Transfer trajectories</li>
+            <li>Time of flight analysis</li>
+            <li>Delta-v comparison</li>
+            <li>Mission geometry and launch window effects</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Computational Methods</h3>
+          <ul>
+            <li>Numerical simulation</li>
+            <li>Parameter sweeps</li>
+            <li>Plot generation and visualization</li>
+            <li>Data interpretation</li>
+            <li>Engineering assumption tracking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Skills Used and Developed</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Orbital mechanics</li>
+            <li>Trajectory analysis</li>
+            <li>MATLAB and Python simulation</li>
+            <li>Numerical methods</li>
+            <li>Data visualization</li>
+            <li>Mission design trade studies</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Engineering Skills</h3>
+          <ul>
+            <li>Problem formulation</li>
+            <li>Assumption management</li>
+            <li>Technical interpretation</li>
+            <li>Model verification awareness</li>
+            <li>Documentation of results</li>
+            <li>Communicating complex analysis clearly</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Selected Simulation Work</h2>
+      <p>
+        This section can be customized with specific simulation examples. You can add screenshots, plots, or short summaries from orbital transfer assignments, porkchop plot work, Lambert problem practice, or mission design studies.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Porkchop Plot Analysis</h3>
+          <ul>
+            <li>Compared departure and arrival date combinations</li>
+            <li>Visualized mission design trade space</li>
+            <li>Studied how transfer timing affects mission feasibility</li>
+            <li>Practiced interpreting contour plots for trajectory planning</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Trajectory Simulation</h3>
+          <ul>
+            <li>Modeled spacecraft motion using orbital mechanics assumptions</li>
+            <li>Generated plots to evaluate trajectory behavior</li>
+            <li>Connected numerical outputs to mission-level interpretation</li>
+            <li>Practiced verification through checks on expected behavior</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>What I Learned</h2>
+      <p>
+        These simulations helped me understand that mission design is highly dependent on assumptions, timing, and visualization. A trajectory result is not just a number. It needs to be interpreted in the context of launch windows, transfer time, delta-v, and mission objectives.
+      </p>
+
+      <p>
+        I also learned the importance of presenting simulation results clearly. Plots, tables, and documented assumptions make it much easier to explain the technical value of a model and identify where the analysis could be improved.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Future Improvements</h2>
+      <p>
+        Future work could include adding a Lambert solver, expanding the simulations to include perturbations, improving the porkchop plot workflow, adding Monte Carlo analysis, and creating a more organized GitHub repository with reusable scripts, figures, and documentation.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ian Merriman. Aerospace Engineering Portfolio.</p>
+    </div>
+  </footer>
+</body>
+</html>
