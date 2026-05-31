@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocketry Projects | Ian Merriman</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card-light: #1f2937;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --border: rgba(148, 163, 184, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9)), url("../NASA_Wallpaper.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(950px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      padding: 1rem 0;
+    }
+
+    .back-link {
+      font-weight: 700;
+    }
+
+    .project-hero {
+      padding: 4rem 0 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 2rem 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 800px;
+    }
+
+    .project-image {
+      width: 100%;
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      margin: 1rem 0;
+      background: var(--card);
+    }
+
+    .image-caption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+    }
+
+    ul {
+      color: var(--muted);
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="back-link" href="../index.html">← Back to Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero container">
+      <span class="badge">Rocketry | Testing | Manufacturing | Documentation</span>
+      <h1>Rocketry Projects</h1>
+      <p class="lead">
+        Hands-on student rocketry experience involving design support, manufacturing, testing, safety planning, documentation, and team-based engineering work through Aero Mavs.
+      </p>
+
+      <div class="tag-list">
+        <span class="tag">Rocketry</span>
+        <span class="tag">Testing</span>
+        <span class="tag">Manufacturing</span>
+        <span class="tag">Safety Planning</span>
+        <span class="tag">Technical Documentation</span>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Project Overview</h2>
+      <p>
+        My rocketry project experience comes from supporting student-led aerospace projects through Aero Mavs. These projects involved practical engineering work related to rocket design, manufacturing, testing, safety planning, and project coordination.
+      </p>
+
+      <p>
+        This work helped me connect classroom aerospace concepts to real hardware, team workflows, and the practical challenges that come with building and testing rocket systems.
+      </p>
+
+      <img class="project-image" src="../images/rocketry-projects-1.jpg" alt="Rocketry project photo" />
+      <p class="image-caption">
+        Replace this image with a photo from Aero Mavs, a rocket build, manufacturing work, testing setup, or competition preparation.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>My Role</h2>
+      <p>
+        I supported rocketry work through leadership, coordination, documentation, and technical project support. My role included helping organize project communication, supporting safety-related discussions, assisting with documentation, and contributing to the team environment needed for successful rocket development.
+      </p>
+
+      <p>
+        Through this work, I gained experience working with multidisciplinary teams and learned how important communication, planning, and safety are in aerospace hardware projects.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Technical Approach</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Project Activities</h3>
+          <ul>
+            <li>Rocket design and build support</li>
+            <li>Manufacturing and assembly coordination</li>
+            <li>Testing preparation and planning</li>
+            <li>Safety documentation and review support</li>
+            <li>Team communication and project organization</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Engineering Focus Areas</h3>
+          <ul>
+            <li>Rocket structures and subsystems</li>
+            <li>Test readiness and risk awareness</li>
+            <li>Manufacturing constraints</li>
+            <li>Hardware troubleshooting</li>
+            <li>Design documentation and review process</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Skills Used and Developed</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Rocketry fundamentals</li>
+            <li>Manufacturing support</li>
+            <li>Test planning</li>
+            <li>Hardware integration awareness</li>
+            <li>Engineering documentation</li>
+            <li>Requirements-style thinking</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Professional Skills</h3>
+          <ul>
+            <li>Leadership</li>
+            <li>Project coordination</li>
+            <li>Team communication</li>
+            <li>Safety-focused decision-making</li>
+            <li>Problem-solving under constraints</li>
+            <li>Design review communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Selected Contributions</h2>
+      <p>
+        This section can be customized with specific examples from your rocketry work. You can list build activities, test events, safety documents, launch preparation, competition work, or team leadership responsibilities.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Engineering Support</h3>
+          <ul>
+            <li>Supported team planning for rocket development activities</li>
+            <li>Contributed to technical and safety documentation</li>
+            <li>Helped coordinate communication between project members</li>
+            <li>Participated in discussions related to testing and project readiness</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Leadership Support</h3>
+          <ul>
+            <li>Helped maintain project organization across team activities</li>
+            <li>Supported a safety-conscious team culture</li>
+            <li>Worked with students across different experience levels</li>
+            <li>Helped connect technical goals with project execution</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>What I Learned</h2>
+      <p>
+        These rocketry projects helped me understand that aerospace engineering is not only about analysis, but also about execution. Hardware projects require careful planning, clear documentation, safety awareness, and strong communication between team members.
+      </p>
+
+      <p>
+        I also learned how valuable it is to break large engineering goals into smaller tasks, verify readiness before testing, and document decisions so the team can move forward with a shared understanding.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Future Improvements</h2>
+      <p>
+        In future rocketry work, I would like to expand my technical contributions in areas such as flight simulation, avionics, recovery systems, thrust vector control, and test data analysis. I would also like to continue improving project documentation so that design decisions, safety requirements, and test results are easier for future team members to build upon.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ian Merriman. Aerospace Engineering Portfolio.</p>
+    </div>
+  </footer>
+</body>
+</html>
