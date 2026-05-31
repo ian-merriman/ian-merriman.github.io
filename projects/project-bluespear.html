@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project BlueSpear | Ian Merriman</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card-light: #1f2937;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --border: rgba(148, 163, 184, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9)), url("../NASA_Wallpaper.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(950px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      padding: 1rem 0;
+    }
+
+    .back-link {
+      font-weight: 700;
+    }
+
+    .project-hero {
+      padding: 4rem 0 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 2rem 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 800px;
+    }
+
+    .project-image {
+      width: 100%;
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      margin: 1rem 0;
+      background: var(--card);
+    }
+
+    .image-caption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+    }
+
+    ul {
+      color: var(--muted);
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="back-link" href="../index.html">← Back to Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero container">
+      <span class="badge">Systems Engineering | Mission Planning | Requirements | High-Altitude Rocketry</span>
+      <h1>Project BlueSpear</h1>
+      <p class="lead">
+        A long-term student-led high-altitude rocket concept focused on mission planning, requirements development, launch site research, safety documentation, and systems engineering for near-space flight conditions.
+      </p>
+
+      <div class="tag-list">
+        <span class="tag">Systems Engineering</span>
+        <span class="tag">Mission Planning</span>
+        <span class="tag">Requirements Development</span>
+        <span class="tag">Launch Site Research</span>
+        <span class="tag">Safety Documentation</span>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Project Overview</h2>
+      <p>
+        Project BlueSpear is a long-term Aero Mavs concept focused on developing a high-altitude rocket system with the goal of reaching near-space flight conditions. The project required early-stage planning around mission objectives, launch feasibility, safety requirements, technical organization, and future subsystem development.
+      </p>
+
+      <p>
+        Because of the scale and complexity of the concept, the project emphasized systems-level thinking. Rather than treating the rocket as only a hardware build, the work involved considering mission planning, launch operations, safety constraints, documentation needs, and the long-term structure required to support a student-led aerospace program.
+      </p>
+
+      <img class="project-image" src="../images/project-bluespear-1.jpg" alt="Project BlueSpear concept or planning image" />
+      <p class="image-caption">
+        Replace this image with a BlueSpear concept graphic, team image, rocket rendering, launch site research figure, or project planning screenshot.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>My Role</h2>
+      <p>
+        I supported Project BlueSpear through early project organization, mission planning, safety documentation, and systems-level coordination. My work helped define the type of planning and documentation needed for a long-term high-altitude rocket effort.
+      </p>
+
+      <p>
+        This included thinking through launch site options, safety training needs, project requirements, external coordination, and how a student team could gradually build toward a technically ambitious rocket program.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Mission and Systems Focus</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Mission Planning</h3>
+          <ul>
+            <li>Defined the overall purpose of the high-altitude rocket concept</li>
+            <li>Considered long-term goals related to near-space flight conditions</li>
+            <li>Researched potential launch site and operations constraints</li>
+            <li>Identified planning needs for a large student-led aerospace effort</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Systems Engineering</h3>
+          <ul>
+            <li>Considered how major rocket subsystems would need to work together</li>
+            <li>Supported requirements-style thinking for safety and project execution</li>
+            <li>Organized project goals into manageable planning areas</li>
+            <li>Connected technical ambition with documentation and readiness needs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Technical Approach</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Planning Inputs</h3>
+          <ul>
+            <li>Mission objective and target flight environment</li>
+            <li>Launch site feasibility and operational constraints</li>
+            <li>Safety training and risk management needs</li>
+            <li>Student team capabilities and project continuity</li>
+            <li>Long-term documentation and review process</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Project Outputs</h3>
+          <ul>
+            <li>Early mission planning structure</li>
+            <li>Safety and training considerations</li>
+            <li>Launch site research direction</li>
+            <li>Systems-level project organization</li>
+            <li>Foundation for future technical development</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Skills Used and Developed</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Systems engineering</li>
+            <li>Mission planning</li>
+            <li>Requirements development</li>
+            <li>Launch operations research</li>
+            <li>Safety documentation</li>
+            <li>Aerospace systems thinking</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Professional Skills</h3>
+          <ul>
+            <li>Project organization</li>
+            <li>Technical communication</li>
+            <li>Leadership</li>
+            <li>Long-term planning</li>
+            <li>Risk-aware decision-making</li>
+            <li>Team coordination</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Selected Contributions</h2>
+      <p>
+        This section can be customized with specific BlueSpear work products, such as safety training matrices, launch site comparisons, project planning notes, subsystem planning documents, or sponsor/outreach research.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Planning and Documentation</h3>
+          <ul>
+            <li>Supported early planning for a long-term high-altitude rocket concept</li>
+            <li>Helped organize safety and training considerations</li>
+            <li>Contributed to launch site and operations research</li>
+            <li>Helped structure project needs for future team development</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Systems-Level Thinking</h3>
+          <ul>
+            <li>Connected mission goals to project readiness needs</li>
+            <li>Considered how technical, safety, and operational constraints interact</li>
+            <li>Helped frame the project as a long-term aerospace systems effort</li>
+            <li>Focused on documentation that future team members could build from</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>What I Learned</h2>
+      <p>
+        Project BlueSpear helped me understand the importance of systems engineering in ambitious aerospace projects. A high-altitude rocket concept requires more than a strong technical idea. It also requires requirements, safety planning, launch operations research, documentation, team continuity, and realistic project phasing.
+      </p>
+
+      <p>
+        This project also strengthened my understanding of how early planning decisions shape later engineering work. Defining goals, constraints, and documentation expectations early makes it easier for a team to transition from concept development into subsystem design, testing, and integration.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Future Improvements</h2>
+      <p>
+        Future work on Project BlueSpear could include developing a formal mission requirements document, creating subsystem-level requirements, expanding flight simulation work, defining a test program, building a risk matrix, and creating a staged technical roadmap for future team members.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ian Merriman. Aerospace Engineering Portfolio.</p>
+    </div>
+  </footer>
+</body>
+</html>
