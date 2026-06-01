@@ -110,9 +110,11 @@
 
     .project-image {
       width: 100%;
+      max-width: 850px;
+      display: block;
+      margin: 1rem auto;
       border-radius: 1rem;
       border: 1px solid var(--border);
-      margin: 1rem 0;
       background: var(--card);
     }
 
@@ -121,6 +123,7 @@
       font-size: 0.9rem;
       margin-top: -0.5rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     .grid {
@@ -161,6 +164,27 @@
       padding: 0.25rem 0.55rem;
     }
 
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #082f49;
+      border-color: var(--accent);
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 1.5rem 0;
@@ -173,6 +197,10 @@
     @media (max-width: 800px) {
       .grid {
         grid-template-columns: 1fr;
+      }
+
+      .project-image {
+        max-width: 100%;
       }
     }
   </style>
@@ -192,14 +220,14 @@
       <span class="badge">Rocketry | Testing | Manufacturing | Documentation</span>
       <h1>Rocketry Projects</h1>
       <p class="lead">
-        Hands-on student rocketry experience involving design support, manufacturing, testing, safety planning, documentation, and team-based engineering work through Aero Mavs.
+        Hands-on student rocketry experience involving personal rocket development, design support, manufacturing, testing, safety planning, documentation, and team-based engineering work.
       </p>
 
       <div class="tag-list">
         <span class="tag">Rocketry</span>
         <span class="tag">Testing</span>
         <span class="tag">Manufacturing</span>
-        <span class="tag">Safety Planning</span>
+        <span class="tag">SolidWorks</span>
         <span class="tag">Technical Documentation</span>
       </div>
     </section>
@@ -207,7 +235,7 @@
     <section class="container">
       <h2>Project Overview</h2>
       <p>
-        My rocketry project experience comes from supporting student-led aerospace projects through Aero Mavs. These projects involved practical engineering work related to rocket design, manufacturing, testing, safety planning, and project coordination.
+        My rocketry project experience includes both student-led aerospace work through Aero Mavs and individual rocket development. These projects involved practical engineering work related to rocket design, manufacturing, testing, safety planning, documentation, and project coordination.
       </p>
 
       <p>
@@ -216,46 +244,68 @@
 
       <img class="project-image" src="../images/rocketry-projects-1.jpg" alt="Rocketry project photo" />
       <p class="image-caption">
-        Replace this image with a photo from Aero Mavs, a rocket build, manufacturing work, testing setup, or competition preparation.
+        Rocketry project work involving design, build, testing, or launch preparation.
       </p>
     </section>
 
     <section class="container">
       <h2>My Role</h2>
       <p>
-        I supported rocketry work through leadership, coordination, documentation, and technical project support. My role included helping organize project communication, supporting safety-related discussions, assisting with documentation, and contributing to the team environment needed for successful rocket development.
+        I supported rocketry work through leadership, coordination, documentation, and technical project support. I also completed individual design work for a personal L1 certification rocket, including a modified drogue-chute nose-cone system intended to improve parachute deployment reliability.
       </p>
 
       <p>
-        Through this work, I gained experience working with multidisciplinary teams and learned how important communication, planning, and safety are in aerospace hardware projects.
+        Through this work, I gained experience working with multidisciplinary teams while also developing my own hardware design, testing, troubleshooting, and documentation skills.
       </p>
     </section>
 
     <section class="container">
       <h2>Technical Approach</h2>
 
+      <p>
+        One of my individual rocketry projects was a drogue-chute nose-cone design for my L1 certification rocket. I created the system after an earlier flight failed due to the parachute not deploying properly. The redesigned nose cone was built to self-deploy after the ejection charge fired, using airbrakes that splay outward to increase drag and help pull the parachute out of the body tube.
+      </p>
+
+      <p>
+        I began by modifying the original nose-cone design, shortening the shoulder section, increasing the wall thickness, and removing material in an X-pattern to create space for the airbrake arms. The airbrakes were split into four curved sections and were later reinforced with steel pivot rods instead of printed PLA pivots to reduce the chance of failure under loading.
+      </p>
+
       <div class="grid">
         <div class="card">
-          <h3>Project Activities</h3>
+          <h3>Personal Rocket Design Work</h3>
           <ul>
-            <li>Rocket design and build support</li>
-            <li>Manufacturing and assembly coordination</li>
-            <li>Testing preparation and planning</li>
-            <li>Safety documentation and review support</li>
-            <li>Team communication and project organization</li>
+            <li>Designed a modified drogue-chute nose cone for an L1 certification rocket</li>
+            <li>Created a four-section airbrake concept to increase drag after ejection</li>
+            <li>Used SolidWorks to redesign the nose cone and airbrake components</li>
+            <li>Modified the design after the first rocket experienced parachute deployment failure</li>
+            <li>Added stronger pivot hardware using steel rods cut to size</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Engineering Focus Areas</h3>
+          <h3>Testing and Result</h3>
           <ul>
-            <li>Rocket structures and subsystems</li>
-            <li>Test readiness and risk awareness</li>
-            <li>Manufacturing constraints</li>
-            <li>Hardware troubleshooting</li>
-            <li>Design documentation and review process</li>
+            <li>Tested the nose-cone system before flight</li>
+            <li>Used the mechanism to help dislodge the parachute from the body tube</li>
+            <li>Improved the airbrake action with rubber-band tensioning and after-print modifications</li>
+            <li>Achieved successful deployment during the test flight</li>
+            <li>Earned L1 certification through the Tripoli Rocketry Association</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Drogue-Nose-Cone Functionality</h2>
+
+      <img class="project-image" src="../images/rocketry-technical-approach.gif" alt="GIF showing drogue nose-cone airbrake functionality" />
+
+      <p class="image-caption">
+        Demonstration GIF showing the drogue-nose-cone airbrakes opening after the nose cone leaves the rocket body tube.
+      </p>
+
+      <div class="button-row">
+        <a class="button primary" href="../Nose_Cone_Display.pdf" target="_blank">View Nose Cone Project PDF</a>
       </div>
     </section>
 
@@ -267,23 +317,23 @@
           <h3>Technical Skills</h3>
           <ul>
             <li>Rocketry fundamentals</li>
-            <li>Manufacturing support</li>
-            <li>Test planning</li>
-            <li>Hardware integration awareness</li>
-            <li>Engineering documentation</li>
-            <li>Requirements-style thinking</li>
+            <li>SolidWorks design</li>
+            <li>3D printing design considerations</li>
+            <li>Mechanical redesign and iteration</li>
+            <li>Hardware integration</li>
+            <li>Testing and troubleshooting</li>
           </ul>
         </div>
 
         <div class="card">
           <h3>Professional Skills</h3>
           <ul>
-            <li>Leadership</li>
-            <li>Project coordination</li>
-            <li>Team communication</li>
-            <li>Safety-focused decision-making</li>
+            <li>Technical documentation</li>
+            <li>Failure analysis</li>
             <li>Problem-solving under constraints</li>
             <li>Design review communication</li>
+            <li>Safety-focused decision-making</li>
+            <li>Project ownership</li>
           </ul>
         </div>
       </div>
@@ -292,27 +342,27 @@
     <section class="container">
       <h2>Selected Contributions</h2>
       <p>
-        This section can be customized with specific examples from your rocketry work. You can list build activities, test events, safety documents, launch preparation, competition work, or team leadership responsibilities.
+        This project shows my ability to identify a failure point, redesign a mechanical system, test the updated design, and document the engineering process. The nose-cone system moved from a recovery problem to a working mechanism that successfully supported my L1 certification flight.
       </p>
 
       <div class="grid">
         <div class="card">
           <h3>Engineering Support</h3>
           <ul>
-            <li>Supported team planning for rocket development activities</li>
-            <li>Contributed to technical and safety documentation</li>
-            <li>Helped coordinate communication between project members</li>
-            <li>Participated in discussions related to testing and project readiness</li>
+            <li>Identified a parachute deployment reliability issue</li>
+            <li>Created a modified nose-cone design to improve recovery performance</li>
+            <li>Used design iteration to strengthen weak points</li>
+            <li>Documented the design, testing, and flight result</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Leadership Support</h3>
+          <h3>Leadership and Team Support</h3>
           <ul>
-            <li>Helped maintain project organization across team activities</li>
-            <li>Supported a safety-conscious team culture</li>
-            <li>Worked with students across different experience levels</li>
-            <li>Helped connect technical goals with project execution</li>
+            <li>Supported team planning for rocket development activities</li>
+            <li>Contributed to technical and safety documentation</li>
+            <li>Helped coordinate communication between project members</li>
+            <li>Participated in discussions related to testing and project readiness</li>
           </ul>
         </div>
       </div>
@@ -325,14 +375,14 @@
       </p>
 
       <p>
-        I also learned how valuable it is to break large engineering goals into smaller tasks, verify readiness before testing, and document decisions so the team can move forward with a shared understanding.
+        The drogue-nose-cone project specifically taught me how valuable it is to design around failure modes. After the first parachute deployment issue, I redesigned the mechanism, strengthened weak points, tested the system, and verified that the final design worked in flight.
       </p>
     </section>
 
     <section class="container">
       <h2>Future Improvements</h2>
       <p>
-        In future rocketry work, I would like to expand my technical contributions in areas such as flight simulation, avionics, recovery systems, thrust vector control, and test data analysis. I would also like to continue improving project documentation so that design decisions, safety requirements, and test results are easier for future team members to build upon.
+        In future rocketry work, I would like to expand my technical contributions in areas such as flight simulation, avionics, recovery systems, thrust vector control, and test data analysis. For the drogue-nose-cone design, future improvements could include additional ground testing, stronger material selection, refined airbrake geometry, and better quantitative tracking of deployment forces.
       </p>
     </section>
   </main>
