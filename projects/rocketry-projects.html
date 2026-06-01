@@ -118,6 +118,10 @@
       background: var(--card);
     }
 
+    .project-gif-small {
+      max-width: 500px;
+    }
+
     .image-caption {
       color: var(--muted);
       font-size: 0.9rem;
@@ -169,6 +173,7 @@
       flex-wrap: wrap;
       gap: 0.75rem;
       margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .button {
@@ -200,6 +205,10 @@
       }
 
       .project-image {
+        max-width: 100%;
+      }
+
+      .project-gif-small {
         max-width: 100%;
       }
     }
@@ -242,7 +251,7 @@
         This work helped me connect classroom aerospace concepts to real hardware, team workflows, and the practical challenges that come with building and testing rocket systems.
       </p>
 
-      <img class="project-image" src="../images/IREC_Rocket.jpg" alt="Rocketry project photo" />
+      <img class="project-image" src="../images/IREC_Rocket_group.png" alt="Rocketry project photo" />
       <p class="image-caption">
         Rocketry project work involving design, build, testing, or launch preparation.
       </p>
@@ -296,17 +305,25 @@
     </section>
 
     <section class="container">
-      <h2>Drogue-Nose-Cone Functionality</h2>
+      <h2>Drogue-Nose-Cone Project</h2>
 
-      <img class="project-image" src="../images/Nose_Cone_Drogue.gif" alt="GIF showing drogue nose-cone airbrake functionality" />
+      <p>
+        This project focused on improving recovery reliability for my L1 certification rocket. After an earlier parachute deployment failure, I redesigned the nose cone so that it could help pull the parachute out of the body tube after ejection. The design uses four deployable airbrakes that open outward, increasing drag and helping the recovery system deploy more consistently.
+      </p>
 
-      <p class="image-caption">
-        Demonstration GIF showing the drogue-nose-cone airbrakes opening after the nose cone leaves the rocket body tube.
+      <p>
+        I modeled the redesigned nose cone and airbrake components in SolidWorks, adjusted the shoulder geometry, added pivot slots, reinforced the mechanism with steel rods, and tested the design before flight. The final system successfully deployed during the test flight and contributed to my L1 certification through the Tripoli Rocketry Association.
       </p>
 
       <div class="button-row">
         <a class="button primary" href="../Nose_Cone_Display.pdf" target="_blank">View Nose Cone Project PDF</a>
       </div>
+
+      <img class="project-image project-gif-small" src="../images/Nose_Cone_Drogue.gif" alt="GIF showing drogue nose-cone airbrake functionality" />
+
+      <p class="image-caption">
+        Demonstration GIF showing the drogue-nose-cone airbrakes opening after the nose cone leaves the rocket body tube.
+      </p>
     </section>
 
     <section class="container">
