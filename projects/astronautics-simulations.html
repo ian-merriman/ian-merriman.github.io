@@ -197,17 +197,17 @@
 
   <main>
     <section class="project-hero container">
-      <span class="badge">Astronautics II | Orbital Mechanics | Rendezvous | MATLAB Simulation</span>
+      <span class="badge">Astronautics II | Orbital Mechanics | Rendezvous | Transfer Optimization</span>
       <h1>Astronautics Simulations</h1>
       <p class="lead">
-        MATLAB-based astronautics simulations focused on orbital propagation, rendezvous maneuver planning, ground track generation, classical orbital element analysis, and trajectory optimization.
+        MATLAB-based astronautics simulations focused on orbital propagation, rendezvous maneuver planning, ground track generation, classical orbital element analysis, and interplanetary transfer optimization.
       </p>
 
       <div class="tag-list">
         <span class="tag">Orbital Mechanics</span>
         <span class="tag">Rendezvous</span>
         <span class="tag">MATLAB</span>
-        <span class="tag">Trajectory Simulation</span>
+        <span class="tag">Trajectory Optimization</span>
         <span class="tag">Mission Design</span>
       </div>
     </section>
@@ -215,18 +215,18 @@
     <section class="container">
       <h2>Project Overview</h2>
       <p>
-        This page highlights my computational astronautics work from Astronautics II. The class focused on applying orbital mechanics theory through MATLAB simulations, numerical propagation, maneuver calculations, mission summaries, and visual trajectory outputs.
+        This page highlights my computational astronautics work from Astronautics II. The course focused on applying orbital mechanics theory through MATLAB simulations, numerical propagation, maneuver calculations, mission event summaries, and visual trajectory outputs.
       </p>
 
       <p>
-        The work included Earth orbit propagation, relative motion analysis, two-impulse rendezvous planning, ground track visualization, orbital element tracking, inclination-change maneuvers, phasing maneuvers, Earth-Moon trajectory design, and interplanetary transfer optimization.
+        The work included Earth-orbit propagation, relative motion analysis, two-impulse rendezvous planning, ground track visualization, orbital element tracking, inclination-change maneuvers, phasing maneuvers, Earth-Moon trajectory design, and interplanetary transfer optimization.
       </p>
     </section>
 
     <section class="container">
       <h2>Highlighted Simulation: Robotic Servicing Rendezvous</h2>
       <p>
-        The highlighted simulation modeled a robotic servicing satellite performing a sequence of maneuvers to rendezvous with a target vehicle. The mission plan required the chase vehicle to propagate to a maneuver opportunity, complete an inclination change, continue to an appropriate phasing location, perform a phasing maneuver, and arrive at rendezvous with the target vehicle.
+        The highlighted rendezvous simulation modeled a robotic servicing satellite performing a sequence of maneuvers to meet a target vehicle. The mission plan required the chase vehicle to propagate to a maneuver opportunity, complete an inclination change, continue to an appropriate phasing location, perform a phasing maneuver, and arrive at rendezvous with the target vehicle.
       </p>
 
       <p>
@@ -240,9 +240,9 @@
     </section>
 
     <section class="container">
-      <h2>Mission Ground Track</h2>
+      <h2>Rendezvous Ground Track</h2>
       <p>
-        The ground track output shows the target and chase vehicle motion projected over Earth, with annotated mission events marking the sequence from mission commencement through maneuver execution and rendezvous. This type of visualization helped connect orbital motion in space to the vehicle locations over Earth during the mission timeline.
+        The ground track output shows the target and chase vehicle motion projected over Earth, with annotated mission events marking the sequence from mission commencement through maneuver execution and rendezvous. This visualization helped connect the orbital motion in space to vehicle locations over Earth during the mission timeline.
       </p>
 
       <img class="project-image" src="../images/Rendezvous_Groundtrack.png" alt="Ground track of rendezvous simulation with annotated mission events" />
@@ -252,13 +252,33 @@
     </section>
 
     <section class="container">
-      <h2>Technical Approach</h2>
+      <h2>Earth-Uranus Transfer Optimization</h2>
       <p>
-        The simulation workflow began with initial classical orbital elements for the target and chase vehicles. These values were converted into state vectors and propagated numerically using the two-body equations of motion. The resulting states were used to generate orbit views, ground tracks, and classical orbital element plots.
+        I also worked on interplanetary transfer optimization using a porkchop plot to evaluate possible launch and arrival date combinations for an Earth-Uranus mission. This type of analysis helps identify favorable launch windows by comparing transfer opportunities across a range of dates.
       </p>
 
       <p>
-        For the rendezvous mission, I calculated the required inclination change between the chase and target vehicle orbits, selected a maneuver opportunity, propagated both vehicles to that event, and then applied the inclination-change burn. After the inclination change, I computed the phase relationship between the vehicles and designed a phasing maneuver to bring the chase vehicle to the target.
+        The porkchop plot provided a visual way to compare trajectory options and understand how launch timing, arrival timing, and transfer energy influence mission design. This work strengthened my understanding of interplanetary trajectory planning and how optimization tools are used to narrow down feasible mission opportunities.
+      </p>
+
+      <img class="project-image" src="../images/Earth_Uranus_Porkchop.png" alt="Earth-Uranus porkchop plot showing launch window optimization" />
+      <p class="image-caption">
+        Earth-Uranus porkchop plot used to evaluate launch window and transfer opportunity options.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Technical Approach</h2>
+      <p>
+        The simulation workflow began with orbital elements, state vectors, and mission-specific initial conditions. These inputs were propagated numerically using the two-body equations of motion, then used to generate orbit views, ground tracks, classical orbital element plots, and mission event summaries.
+      </p>
+
+      <p>
+        For the rendezvous mission, I calculated the required inclination change between the chase and target vehicle orbits, selected a maneuver opportunity, propagated both vehicles to that event, and applied the inclination-change burn. After the inclination change, I computed the phase relationship between the vehicles and designed a phasing maneuver to bring the chase vehicle to the target.
+      </p>
+
+      <p>
+        For the interplanetary transfer work, I used launch and arrival date sweeps to visualize transfer opportunities. The resulting porkchop plot helped compare mission options and identify more favorable combinations of departure and arrival dates.
       </p>
 
       <div class="grid">
@@ -275,14 +295,14 @@
         </div>
 
         <div class="card">
-          <h3>Simulation Outputs</h3>
+          <h3>Optimization Workflow</h3>
           <ul>
-            <li>3D isometric orbit visualization</li>
-            <li>XY, XZ, and YZ trajectory views</li>
-            <li>Annotated ground track plot</li>
-            <li>Classical orbital element plots</li>
-            <li>Formatted mission event summary</li>
-            <li>Delta-v and timing information for maneuvers</li>
+            <li>Evaluated launch and arrival date combinations</li>
+            <li>Generated a porkchop plot for transfer opportunity comparison</li>
+            <li>Compared trajectory options across the design space</li>
+            <li>Connected transfer timing to mission feasibility</li>
+            <li>Used visualization to support trajectory selection</li>
+            <li>Practiced mission design trade interpretation</li>
           </ul>
         </div>
       </div>
@@ -302,16 +322,18 @@
             <li>Worked with RTN coordinate-frame relative position and velocity</li>
             <li>Calculated two-impulse rendezvous delta-v</li>
             <li>Generated annotated ground tracks and mission summaries</li>
+            <li>Tracked classical orbital elements over time</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Trajectory and Optimization Work</h3>
+          <h3>Trajectory and Mission Design</h3>
           <ul>
             <li>Simulated an orbital impact trajectory to determine impact timing</li>
             <li>Designed maneuver sequences using inclination change and phasing logic</li>
             <li>Worked with Earth-Moon Lagrange point trajectory optimization</li>
-            <li>Created interplanetary transfer studies using porkchop plots and trajectory refinement</li>
+            <li>Created interplanetary transfer studies using porkchop plots</li>
+            <li>Interpreted trajectory outputs for mission planning decisions</li>
           </ul>
         </div>
       </div>
@@ -330,7 +352,7 @@
             <li>Coordinate transformations</li>
             <li>Rendezvous and phasing maneuvers</li>
             <li>Delta-v calculations</li>
-            <li>Trajectory optimization concepts</li>
+            <li>Interplanetary transfer optimization</li>
           </ul>
         </div>
 
@@ -350,6 +372,35 @@
     </section>
 
     <section class="container">
+      <h2>Selected Contributions</h2>
+      <p>
+        These simulations show my ability to turn astronautics theory into working computational tools. I used MATLAB to propagate spacecraft trajectories, update vehicle states after maneuvers, calculate delta-v requirements, generate mission visuals, and interpret results in the context of mission design.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Rendezvous Simulation</h3>
+          <ul>
+            <li>Built an end-to-end maneuver sequence for target and chase vehicles</li>
+            <li>Connected inclination change and phasing maneuvers into one mission timeline</li>
+            <li>Generated annotated orbit and ground track visualizations</li>
+            <li>Formatted mission event information including timing, location, and delta-v</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Earth-Uranus Optimization</h3>
+          <ul>
+            <li>Evaluated interplanetary transfer opportunities using date sweeps</li>
+            <li>Used a porkchop plot to visualize launch window performance</li>
+            <li>Compared mission timing options for transfer feasibility</li>
+            <li>Strengthened understanding of trajectory optimization and mission planning</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
       <h2>What I Learned</h2>
       <p>
         These projects helped me understand how orbital mechanics concepts become practical simulation tools. Instead of only solving isolated textbook problems, I built simulations that connected orbital elements, state vectors, maneuver design, time propagation, ground tracks, and mission event reporting.
@@ -357,6 +408,10 @@
 
       <p>
         The rendezvous simulation was especially useful because it required multiple steps to work together correctly. A successful mission depended on choosing the maneuver sequence, propagating each segment, updating the spacecraft state after each burn, and checking that the resulting trajectory reached the intended rendezvous condition.
+      </p>
+
+      <p>
+        The Earth-Uranus optimization work helped me see how interplanetary mission design depends heavily on timing. The porkchop plot made it easier to understand how launch windows and arrival dates influence transfer difficulty and mission feasibility.
       </p>
     </section>
 
