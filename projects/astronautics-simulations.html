@@ -43,7 +43,7 @@
     }
 
     .container {
-      width: min(950px, 92%);
+      width: min(1000px, 92%);
       margin: 0 auto;
     }
 
@@ -91,6 +91,7 @@
 
     h3 {
       margin-bottom: 0.5rem;
+      font-size: 1.15rem;
     }
 
     p {
@@ -105,12 +106,12 @@
     .lead {
       color: var(--muted);
       font-size: 1.1rem;
-      max-width: 800px;
+      max-width: 850px;
     }
 
     .project-image {
       width: 100%;
-      max-width: 850px;
+      max-width: 900px;
       display: block;
       margin: 1rem auto;
       border-radius: 1rem;
@@ -145,7 +146,7 @@
     }
 
     li {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.45rem;
     }
 
     .tag-list {
@@ -196,99 +197,121 @@
 
   <main>
     <section class="project-hero container">
-      <span class="badge">Orbital Mechanics | Simulation | MATLAB/Python | Mission Design</span>
+      <span class="badge">Astronautics II | Orbital Mechanics | Rendezvous | MATLAB Simulation</span>
       <h1>Astronautics Simulations</h1>
       <p class="lead">
-        Computational astronautics projects involving orbital mechanics, trajectory analysis, porkchop plots, mission design trade studies, and numerical simulation.
+        MATLAB-based astronautics simulations focused on orbital propagation, rendezvous maneuver planning, ground track generation, classical orbital element analysis, and trajectory optimization.
       </p>
 
       <div class="tag-list">
         <span class="tag">Orbital Mechanics</span>
-        <span class="tag">Trajectory Analysis</span>
+        <span class="tag">Rendezvous</span>
+        <span class="tag">MATLAB</span>
+        <span class="tag">Trajectory Simulation</span>
         <span class="tag">Mission Design</span>
-        <span class="tag">MATLAB/Python</span>
-        <span class="tag">Data Visualization</span>
       </div>
     </section>
 
     <section class="container">
       <h2>Project Overview</h2>
       <p>
-        My astronautics simulation projects focus on using computational tools to model orbital mechanics problems and mission design concepts. These projects helped me connect classroom theory to practical analysis by turning equations, assumptions, and mission constraints into simulations and visual results.
+        This page highlights my computational astronautics work from Astronautics II. The class focused on applying orbital mechanics theory through MATLAB simulations, numerical propagation, maneuver calculations, mission summaries, and visual trajectory outputs.
       </p>
 
       <p>
-        Examples of this work include trajectory studies, orbital transfer analysis, porkchop plots, and mission planning trade studies. These simulations strengthened my understanding of how spacecraft motion, transfer timing, and delta-v requirements influence mission design.
-      </p>
-
-      <img class="project-image" src="../images/Earth_Uranus_Launch_Window.png" alt="Porkchop plot from astronautics simulation project" />
-      <p class="image-caption">
-        Porkchop plot generated to visualize trajectory trade space and compare departure and arrival timing options.
+        The work included Earth orbit propagation, relative motion analysis, two-impulse rendezvous planning, ground track visualization, orbital element tracking, inclination-change maneuvers, phasing maneuvers, Earth-Moon trajectory design, and interplanetary transfer optimization.
       </p>
     </section>
 
     <section class="container">
-      <h2>My Role</h2>
+      <h2>Highlighted Simulation: Robotic Servicing Rendezvous</h2>
       <p>
-        I developed and analyzed simulations to better understand orbital mechanics, transfer trajectories, and mission planning decisions. My work involved setting up the problem, defining assumptions, implementing the simulation, generating plots, and interpreting the engineering meaning of the results.
+        The highlighted simulation modeled a robotic servicing satellite performing a sequence of maneuvers to rendezvous with a target vehicle. The mission plan required the chase vehicle to propagate to a maneuver opportunity, complete an inclination change, continue to an appropriate phasing location, perform a phasing maneuver, and arrive at rendezvous with the target vehicle.
       </p>
 
       <p>
-        These projects helped me practice the type of computational analysis used in space mission design, including breaking down a large astronautics problem into inputs, equations, outputs, and visual results.
+        This project connected several astronautics concepts into one end-to-end mission simulation. I used MATLAB to propagate the target and chase vehicle trajectories, calculate the inclination-change opportunity, determine the phase angle between vehicles, compute the phasing maneuver, and visualize the resulting mission geometry.
+      </p>
+
+      <img class="project-image" src="../images/Orbit_Iso.png" alt="Isometric view of rendezvous orbit simulation" />
+      <p class="image-caption">
+        Isometric view of the target and chase vehicle trajectories during the rendezvous simulation.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Mission Ground Track</h2>
+      <p>
+        The ground track output shows the target and chase vehicle motion projected over Earth, with annotated mission events marking the sequence from mission commencement through maneuver execution and rendezvous. This type of visualization helped connect orbital motion in space to the vehicle locations over Earth during the mission timeline.
+      </p>
+
+      <img class="project-image" src="../images/Rendezvous_Groundtrack.png" alt="Ground track of rendezvous simulation with annotated mission events" />
+      <p class="image-caption">
+        Ground track of the rendezvous simulation with annotated target and chase vehicle events.
       </p>
     </section>
 
     <section class="container">
       <h2>Technical Approach</h2>
+      <p>
+        The simulation workflow began with initial classical orbital elements for the target and chase vehicles. These values were converted into state vectors and propagated numerically using the two-body equations of motion. The resulting states were used to generate orbit views, ground tracks, and classical orbital element plots.
+      </p>
+
+      <p>
+        For the rendezvous mission, I calculated the required inclination change between the chase and target vehicle orbits, selected a maneuver opportunity, propagated both vehicles to that event, and then applied the inclination-change burn. After the inclination change, I computed the phase relationship between the vehicles and designed a phasing maneuver to bring the chase vehicle to the target.
+      </p>
 
       <div class="grid">
         <div class="card">
-          <h3>Simulation Inputs</h3>
+          <h3>Rendezvous Workflow</h3>
           <ul>
-            <li>Initial and final orbital conditions</li>
-            <li>Departure and arrival timing assumptions</li>
-            <li>Planetary or body parameters</li>
-            <li>Time of flight ranges</li>
-            <li>Mission constraints and simplifying assumptions</li>
+            <li>Propagated target and chase vehicle trajectories</li>
+            <li>Calculated inclination difference between the two orbits</li>
+            <li>Selected the next maneuver opportunity</li>
+            <li>Applied an inclination-change maneuver</li>
+            <li>Calculated phase angle for the phasing maneuver</li>
+            <li>Propagated the final rendezvous segment</li>
           </ul>
         </div>
 
         <div class="card">
           <h3>Simulation Outputs</h3>
           <ul>
-            <li>Trajectory plots</li>
-            <li>Transfer timing comparisons</li>
-            <li>Delta-v estimates</li>
-            <li>Porkchop plot visualizations</li>
-            <li>Mission design trade study results</li>
+            <li>3D isometric orbit visualization</li>
+            <li>XY, XZ, and YZ trajectory views</li>
+            <li>Annotated ground track plot</li>
+            <li>Classical orbital element plots</li>
+            <li>Formatted mission event summary</li>
+            <li>Delta-v and timing information for maneuvers</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="container">
-      <h2>Analysis Methods</h2>
+      <h2>Class Work Performed</h2>
+      <p>
+        Across the course, I worked on several progressively more complex astronautics simulations. These assignments helped build experience in moving from orbital mechanics equations to working numerical simulations and mission visualizations.
+      </p>
 
       <div class="grid">
         <div class="card">
-          <h3>Orbital Mechanics Concepts</h3>
+          <h3>Earth-Orbit Simulation</h3>
           <ul>
-            <li>Two-body motion</li>
-            <li>Transfer trajectories</li>
-            <li>Time of flight analysis</li>
-            <li>Delta-v comparison</li>
-            <li>Mission geometry and launch window effects</li>
+            <li>Modeled target and chase satellite relative motion</li>
+            <li>Worked with RTN coordinate-frame relative position and velocity</li>
+            <li>Calculated two-impulse rendezvous delta-v</li>
+            <li>Generated annotated ground tracks and mission summaries</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Computational Methods</h3>
+          <h3>Trajectory and Optimization Work</h3>
           <ul>
-            <li>Numerical simulation</li>
-            <li>Parameter sweeps</li>
-            <li>Plot generation and visualization</li>
-            <li>Data interpretation</li>
-            <li>Engineering assumption tracking</li>
+            <li>Simulated an orbital impact trajectory to determine impact timing</li>
+            <li>Designed maneuver sequences using inclination change and phasing logic</li>
+            <li>Worked with Earth-Moon Lagrange point trajectory optimization</li>
+            <li>Created interplanetary transfer studies using porkchop plots and trajectory refinement</li>
           </ul>
         </div>
       </div>
@@ -302,52 +325,25 @@
           <h3>Technical Skills</h3>
           <ul>
             <li>Orbital mechanics</li>
-            <li>Trajectory analysis</li>
-            <li>MATLAB and Python simulation</li>
-            <li>Numerical methods</li>
-            <li>Data visualization</li>
-            <li>Mission design trade studies</li>
+            <li>Two-body propagation</li>
+            <li>Classical orbital elements</li>
+            <li>Coordinate transformations</li>
+            <li>Rendezvous and phasing maneuvers</li>
+            <li>Delta-v calculations</li>
+            <li>Trajectory optimization concepts</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Engineering Skills</h3>
+          <h3>Programming and Analysis Skills</h3>
           <ul>
-            <li>Problem formulation</li>
-            <li>Assumption management</li>
-            <li>Technical interpretation</li>
-            <li>Model verification awareness</li>
-            <li>Documentation of results</li>
-            <li>Communicating complex analysis clearly</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2>Selected Simulation Work</h2>
-      <p>
-        This section can be customized with specific simulation examples. You can add screenshots, plots, or short summaries from orbital transfer assignments, porkchop plot work, Lambert problem practice, or mission design studies.
-      </p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Porkchop Plot Analysis</h3>
-          <ul>
-            <li>Compared departure and arrival date combinations</li>
-            <li>Visualized mission design trade space</li>
-            <li>Studied how transfer timing affects mission feasibility</li>
-            <li>Practiced interpreting contour plots for trajectory planning</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Trajectory Simulation</h3>
-          <ul>
-            <li>Modeled spacecraft motion using orbital mechanics assumptions</li>
-            <li>Generated plots to evaluate trajectory behavior</li>
-            <li>Connected numerical outputs to mission-level interpretation</li>
-            <li>Practiced verification through checks on expected behavior</li>
+            <li>MATLAB scripting</li>
+            <li>Numerical integration using ODE solvers</li>
+            <li>Mission event formatting</li>
+            <li>Plot generation and annotation</li>
+            <li>Simulation debugging</li>
+            <li>Technical interpretation of orbital results</li>
+            <li>Data visualization for mission design</li>
           </ul>
         </div>
       </div>
@@ -356,18 +352,18 @@
     <section class="container">
       <h2>What I Learned</h2>
       <p>
-        These simulations helped me understand that mission design is highly dependent on assumptions, timing, and visualization. A trajectory result is not just a number. It needs to be interpreted in the context of launch windows, transfer time, delta-v, and mission objectives.
+        These projects helped me understand how orbital mechanics concepts become practical simulation tools. Instead of only solving isolated textbook problems, I built simulations that connected orbital elements, state vectors, maneuver design, time propagation, ground tracks, and mission event reporting.
       </p>
 
       <p>
-        I also learned the importance of presenting simulation results clearly. Plots, tables, and documented assumptions make it much easier to explain the technical value of a model and identify where the analysis could be improved.
+        The rendezvous simulation was especially useful because it required multiple steps to work together correctly. A successful mission depended on choosing the maneuver sequence, propagating each segment, updating the spacecraft state after each burn, and checking that the resulting trajectory reached the intended rendezvous condition.
       </p>
     </section>
 
     <section class="container">
       <h2>Future Improvements</h2>
       <p>
-        Future work could include adding a Lambert solver, expanding the simulations to include perturbations, improving the porkchop plot workflow, adding Monte Carlo analysis, and creating a more organized GitHub repository with reusable scripts, figures, and documentation.
+        Future improvements could include adding more robust error checking, comparing numerical propagation results against analytical solutions, improving plot readability, adding interactive mission timelines, and expanding the models to include perturbations beyond the two-body assumption.
       </p>
     </section>
   </main>
