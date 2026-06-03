@@ -43,7 +43,7 @@
     }
 
     .container {
-      width: min(950px, 92%);
+      width: min(1000px, 92%);
       margin: 0 auto;
     }
 
@@ -91,6 +91,7 @@
 
     h3 {
       margin-bottom: 0.5rem;
+      font-size: 1.15rem;
     }
 
     p {
@@ -105,14 +106,16 @@
     .lead {
       color: var(--muted);
       font-size: 1.1rem;
-      max-width: 800px;
+      max-width: 850px;
     }
 
     .project-image {
       width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 1rem auto;
       border-radius: 1rem;
       border: 1px solid var(--border);
-      margin: 1rem 0;
       background: var(--card);
     }
 
@@ -121,6 +124,7 @@
       font-size: 0.9rem;
       margin-top: -0.5rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     .grid {
@@ -142,7 +146,7 @@
     }
 
     li {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.45rem;
     }
 
     .tag-list {
@@ -174,6 +178,10 @@
       .grid {
         grid-template-columns: 1fr;
       }
+
+      .project-image {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -189,102 +197,110 @@
 
   <main>
     <section class="project-hero container">
-      <span class="badge">Aircraft Design | Stability & Control | Synthesis | Technical Documentation</span>
+      <span class="badge">Senior Design 2 | Stability &amp; Control | Aerothermal Analysis | Conceptual Aircraft Design</span>
       <h1>Senior Design Projects</h1>
       <p class="lead">
-        Team-based aerospace design work involving vehicle analysis, stability and control, synthesis, trade studies, technical research, and engineering documentation.
+        Senior Design 2 focused on the conceptual design of a Mach 3 fighter aircraft. My primary contributions centered on stability and control analysis, with additional emphasis on thermal modeling for high-speed flight and aerodynamic heating.
       </p>
 
       <div class="tag-list">
+        <span class="tag">Stability &amp; Control</span>
+        <span class="tag">Aerothermal Analysis</span>
         <span class="tag">Aircraft Design</span>
-        <span class="tag">Stability & Control</span>
-        <span class="tag">Synthesis</span>
-        <span class="tag">MATLAB Analysis</span>
-        <span class="tag">Technical Writing</span>
+        <span class="tag">MATLAB</span>
+        <span class="tag">Conceptual Design</span>
       </div>
     </section>
 
     <section class="container">
+      <img class="project-image" src="../images/senior-design-team-group.jpg" alt="Senior Design team group photo" />
+      <p class="image-caption">
+        Senior Design 2 team working on the conceptual Mach 3 fighter aircraft project.
+      </p>
+
       <h2>Project Overview</h2>
       <p>
-        My senior design work focused on the reverse engineering and evaluation of the Grumman X-29, an experimental forward-swept wing aircraft. The project required applying aerospace design methods to understand the aircraft configuration, mission assumptions, stability and control behavior, and vehicle-level trade space.
+        My Senior Design 2 project focused on the conceptual design of a Mach 3 fighter aircraft. The project required integrating multiple aerospace disciplines into a single aircraft concept while balancing performance, stability, control effectiveness, structural considerations, and thermal constraints associated with sustained high-speed flight.
       </p>
 
       <p>
-        This work combined technical research, low-fidelity analysis, MATLAB-based calculations, aircraft design methods, and written documentation. The project helped me practice working as part of a larger design team while contributing discipline-specific analysis in synthesis and stability and control.
-      </p>
-
-      <img class="project-image" src="../images/senior-design-projects-1.png" alt="Senior design project figure or X-29 analysis plot" />
-      <p class="image-caption">
-        Replace this image with an X-29 figure, MATLAB plot, trade study figure, stability and control diagram, or senior design report screenshot.
+        My main role was in stability and control, where I helped develop methods to evaluate the aircraft’s static stability, control authority, and moment behavior. I also contributed thermal analysis work to estimate temperature distributions over lifting surfaces during Mach 3 cruise conditions, helping assess how aerodynamic heating would influence the design.
       </p>
     </section>
 
     <section class="container">
       <h2>My Role</h2>
       <p>
-        I contributed to the synthesis and stability and control portions of the project. My work involved supporting vehicle-level configuration evaluation, reviewing technical sources, developing analysis methods, and documenting how aircraft geometry and assumptions influenced stability, trim, and control behavior.
+        I served primarily in a stability and control role, developing and applying methods to analyze aircraft moment behavior, static stability characteristics, trim-related considerations, and control effectiveness. This work involved building engineering methods, implementing calculations in MATLAB, and interpreting the resulting plots to help guide design decisions.
       </p>
 
       <p>
-        I also helped connect the discipline-level analysis to the broader team design process by organizing findings into report-ready explanations, figures, and technical discussion.
+        In addition to stability and control, I worked on thermal analysis to evaluate wing temperature distribution during high-speed flight. This portion of the work focused on estimating how aerodynamic heating varied across the wing and how temperature behavior could be visualized and interpreted as part of the broader aircraft design process.
       </p>
     </section>
 
     <section class="container">
       <h2>Technical Approach</h2>
 
+      <p>
+        The senior design project used a conceptual design process in which geometry, mission requirements, and disciplinary analyses informed one another. For stability and control, my work focused on how the aircraft configuration influenced pitch behavior, static margin, control authority, and general controllability across the design process.
+      </p>
+
+      <p>
+        I developed and used analytical methods and MATLAB tools to study moment behavior and stability trends. This included evaluating the effects of geometry, control surfaces, and configuration choices on the aircraft’s ability to remain stable and controllable. The goal was not only to compute values, but also to interpret what those values meant for the feasibility of the design.
+      </p>
+
+      <p>
+        For the aerothermal portion of the project, I analyzed temperature distribution over a wing surface at Mach 3 cruise conditions. This thermal work helped highlight how high-speed flight introduces important heating considerations that must be taken into account when evaluating the suitability of a conceptual aircraft configuration.
+      </p>
+
       <div class="grid">
         <div class="card">
-          <h3>Analysis Inputs</h3>
+          <h3>Stability and Control Focus</h3>
           <ul>
-            <li>Aircraft geometry and configuration data</li>
-            <li>Mission assumptions and design constraints</li>
-            <li>Wing, canard, and control surface characteristics</li>
-            <li>Mass properties and center-of-gravity assumptions</li>
-            <li>NASA technical reports and aircraft design references</li>
+            <li>Evaluated static stability behavior of the aircraft concept</li>
+            <li>Studied pitch moment trends and control effectiveness</li>
+            <li>Examined trim-related behavior and design implications</li>
+            <li>Used plotted results to compare stability characteristics</li>
+            <li>Supported design decisions with MATLAB-based analysis</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Analysis Outputs</h3>
+          <h3>Thermal Analysis Focus</h3>
           <ul>
-            <li>Configuration evaluation discussion</li>
-            <li>Static stability and static margin considerations</li>
-            <li>Trim and control authority observations</li>
-            <li>Trade study results and design implications</li>
-            <li>Report-ready technical documentation</li>
+            <li>Analyzed wing temperature distribution for Mach 3 cruise flight</li>
+            <li>Estimated aerodynamic heating effects over the wing surface</li>
+            <li>Visualized temperature behavior using 3D distribution plots</li>
+            <li>Connected thermal results to high-speed design considerations</li>
+            <li>Supported multidisciplinary understanding of the aircraft concept</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="container">
-      <h2>Engineering Focus Areas</h2>
+      <h2>Stability and Control Results</h2>
+      <p>
+        A major part of my contribution was generating and interpreting stability and control plots. These plots were used to understand how the aircraft behaved from a static stability perspective and to assess whether the concept showed the controllability characteristics needed for the intended mission and configuration.
+      </p>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Synthesis</h3>
-          <ul>
-            <li>Vehicle-level design assumptions</li>
-            <li>Aircraft configuration evaluation</li>
-            <li>Trade study organization</li>
-            <li>Design method interpretation</li>
-            <li>Connection between mission goals and aircraft sizing</li>
-          </ul>
-        </div>
+      <img class="project-image" src="../images/senior-design-stability-plots.png" alt="Combined stability and control plots for senior design fighter concept" />
+      <p class="image-caption">
+        Combined stability and control plots used to evaluate the Mach 3 fighter concept.
+      </p>
+    </section>
 
-        <div class="card">
-          <h3>Stability and Control</h3>
-          <ul>
-            <li>Neutral point and static margin concepts</li>
-            <li>Canard aircraft behavior</li>
-            <li>Trim and control authority considerations</li>
-            <li>Relaxed static stability awareness</li>
-            <li>Configuration effects on controllability</li>
-          </ul>
-        </div>
-      </div>
+    <section class="container">
+      <h2>Thermal Analysis Visualization</h2>
+      <p>
+        In addition to the stability and control work, I also developed and interpreted thermal results for the aircraft wing. This work focused on understanding how temperature varied across the surface during Mach 3 cruise and how aerodynamic heating could become an important design driver.
+      </p>
+
+      <img class="project-image" src="../images/senior-design-wing-temperature.png" alt="3D wing temperature distribution for Mach 3 fighter concept" />
+      <p class="image-caption">
+        3D wing temperature distribution showing thermal behavior during Mach 3 cruise conditions.
+      </p>
     </section>
 
     <section class="container">
@@ -294,53 +310,53 @@
         <div class="card">
           <h3>Technical Skills</h3>
           <ul>
-            <li>Aircraft design methods</li>
-            <li>Stability and control analysis</li>
-            <li>MATLAB-based analysis</li>
-            <li>Trade studies</li>
-            <li>Low-fidelity aerospace modeling</li>
-            <li>Technical source interpretation</li>
+            <li>Aircraft stability and control analysis</li>
+            <li>Moment and trim-related analysis</li>
+            <li>MATLAB modeling and plotting</li>
+            <li>Aerothermal analysis</li>
+            <li>3D data visualization</li>
+            <li>Conceptual aircraft design</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Professional Skills</h3>
+          <h3>Engineering Skills</h3>
           <ul>
-            <li>Technical writing</li>
-            <li>Team collaboration</li>
-            <li>Design review communication</li>
-            <li>Engineering documentation</li>
-            <li>Research organization</li>
-            <li>Explaining assumptions and limitations</li>
+            <li>Multidisciplinary design thinking</li>
+            <li>Interpretation of technical results</li>
+            <li>Problem decomposition</li>
+            <li>Design trade evaluation</li>
+            <li>Technical communication</li>
+            <li>Team-based project collaboration</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="container">
-      <h2>Selected Project Work</h2>
+      <h2>Selected Contributions</h2>
       <p>
-        This section can be customized with specific senior design examples, such as neutral point calculations, static margin plots, trim curves, sweep trade studies, synthesis carpet plots, or screenshots from your final report.
+        This project demonstrates my ability to contribute meaningfully to a complex aerospace design effort through both analysis and interpretation. My work supported the team’s understanding of how the aircraft concept performed from a stability and control perspective, while also adding thermal analysis relevant to high-speed flight.
       </p>
 
       <div class="grid">
         <div class="card">
-          <h3>Configuration Evaluation</h3>
+          <h3>Stability and Control Contributions</h3>
           <ul>
-            <li>Studied the effect of the X-29 forward-swept wing layout</li>
-            <li>Connected aircraft geometry to stability and control behavior</li>
-            <li>Used technical references to support configuration assumptions</li>
-            <li>Documented aircraft-level design implications</li>
+            <li>Developed analysis methods for aircraft stability and control evaluation</li>
+            <li>Generated plots to study stability behavior and control effectiveness</li>
+            <li>Interpreted results to support conceptual design decisions</li>
+            <li>Contributed to the overall understanding of vehicle controllability</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Discipline Documentation</h3>
+          <h3>Thermal Contributions</h3>
           <ul>
-            <li>Prepared written explanations of methods and results</li>
-            <li>Organized assumptions, figures, and technical discussion</li>
-            <li>Explained how analysis supported the broader design process</li>
-            <li>Connected discipline work to team-level report deliverables</li>
+            <li>Analyzed heating behavior for a Mach 3 wing configuration</li>
+            <li>Produced thermal visualizations for design interpretation</li>
+            <li>Connected aerodynamic heating results to the aircraft concept</li>
+            <li>Helped broaden the project’s multidisciplinary analysis depth</li>
           </ul>
         </div>
       </div>
@@ -349,18 +365,18 @@
     <section class="container">
       <h2>What I Learned</h2>
       <p>
-        This senior design work strengthened my understanding of how aircraft configuration, geometry, stability, and control are connected. It also helped me see how important assumptions are in early-stage aerospace design, especially when using low-fidelity methods to evaluate a complex vehicle.
+        This project taught me that high-speed aircraft design depends on the interaction between many disciplines. Stability and control cannot be treated in isolation, because configuration decisions also affect aerodynamics, thermal behavior, and overall vehicle feasibility.
       </p>
 
       <p>
-        I also learned how to communicate technical analysis in a team setting. A useful engineering result needs to be documented clearly, connected to the project objective, and presented with enough context for other disciplines to use it.
+        I also strengthened my ability to turn analysis into design insight. Rather than simply producing plots, I learned how to interpret them, explain what they meant for the aircraft concept, and use them to support engineering decisions within a team environment.
       </p>
     </section>
 
     <section class="container">
       <h2>Future Improvements</h2>
       <p>
-        Future improvements could include expanding the stability and control analysis, adding dynamic mode evaluation, improving trim and control authority modeling, validating against additional NASA flight-test data, and creating a GitHub repository with organized scripts, figures, assumptions, and documentation.
+        Future work could include expanding the stability and control analysis to cover additional flight conditions, improving control surface trade studies, refining thermal modeling fidelity, and integrating the results more deeply with other aircraft design disciplines. I would also like to continue improving how complex technical results are visualized and communicated.
       </p>
     </section>
   </main>
