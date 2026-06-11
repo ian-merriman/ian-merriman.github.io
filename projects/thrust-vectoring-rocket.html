@@ -43,7 +43,7 @@
     }
 
     .container {
-      width: min(950px, 92%);
+      width: min(1000px, 92%);
       margin: 0 auto;
     }
 
@@ -91,6 +91,7 @@
 
     h3 {
       margin-bottom: 0.5rem;
+      font-size: 1.15rem;
     }
 
     p {
@@ -105,15 +106,7 @@
     .lead {
       color: var(--muted);
       font-size: 1.1rem;
-      max-width: 800px;
-    }
-
-    .project-image {
-      width: 100%;
-      border-radius: 1rem;
-      border: 1px solid var(--border);
-      margin: 1rem 0;
-      background: var(--card);
+      max-width: 850px;
     }
 
     .grid {
@@ -135,7 +128,7 @@
     }
 
     li {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.45rem;
     }
 
     .tag-list {
@@ -154,6 +147,46 @@
       padding: 0.25rem 0.55rem;
     }
 
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #082f49;
+      border-color: var(--accent);
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 650px;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .image-caption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 1.5rem 0;
@@ -166,6 +199,10 @@
     @media (max-width: 800px) {
       .grid {
         grid-template-columns: 1fr;
+      }
+
+      .pdf-frame {
+        height: 420px;
       }
     }
   </style>
@@ -182,56 +219,113 @@
 
   <main>
     <section class="project-hero container">
-      <span class="badge">Controls | IMU Integration | Embedded Systems</span>
+      <span class="badge">Controls | Simulink | Thrust Vectoring | Rocket Dynamics</span>
       <h1>Thrust-Vectoring Rocket Project</h1>
       <p class="lead">
-        An early-stage rocket control project using IMU sensor data and servo actuation to explore thrust-vectoring concepts, feedback control, and vehicle attitude response.
+        A controls-focused rocket simulation project exploring how thrust vectoring can be used to stabilize a rocket’s body angle using feedback control, actuator limits, and simplified rotational dynamics.
       </p>
 
       <div class="tag-list">
-        <span class="tag">Controls</span>
-        <span class="tag">IMU Integration</span>
-        <span class="tag">Embedded Systems</span>
-        <span class="tag">Servo Actuation</span>
+        <span class="tag">Control Systems</span>
+        <span class="tag">Simulink</span>
+        <span class="tag">MATLAB</span>
+        <span class="tag">PD Control</span>
+        <span class="tag">Rocket Dynamics</span>
       </div>
     </section>
 
     <section class="container">
       <h2>Project Overview</h2>
       <p>
-        This project was created to practice the fundamentals of thrust vector control on a small hardware testbed. The goal was to connect an inertial measurement unit to a microcontroller and use orientation data to command a servo-based mechanism that could represent thrust vectoring behavior.
+        This project focused on developing a simplified thrust-vectoring rocket model and using feedback control to stabilize the vehicle body angle. The goal was to connect control theory to a practical aerospace application by modeling how a gimbaled motor can generate corrective torque and reduce angular motion over time.
       </p>
 
-      <img class="project-image" src="../images/thrust-vectoring-rocket-1.jpg" alt="Thrust-vectoring rocket project photo" />
+      <p>
+        I used MATLAB and Simulink to build the control architecture, test controller behavior, and observe how the simulated rocket responded under different damping configurations. This project helped me practice modeling, controller tuning, block diagram development, and interpreting time-response behavior from simulation outputs.
+      </p>
     </section>
 
     <section class="container">
       <h2>My Role</h2>
       <p>
-        I worked on the early concept, hardware setup, control logic, and documentation for the project. My focus was on understanding how sensor data can be converted into actuator commands and how feedback control concepts apply to rocket attitude control.
+        I developed the simulation structure for the body-angle control problem, created the Simulink block diagram, and studied how feedback gains affected the system response. The model used a commanded body angle and angular rate, compared them against the simulated vehicle response, and used the resulting errors to drive a controller.
+      </p>
+
+      <p>
+        I also worked through the control-system analysis behind the model, including proportional and derivative control behavior, closed-loop response, damping behavior, and how actuator limits affect the commanded gimbal angle.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Simulink Control Architecture</h2>
+      <p>
+        The Simulink model uses body-angle and angular-rate commands, calculates the corresponding errors, sends those errors into a controller, then passes the commanded gimbal angle through an angle limiter and rate limiter before it enters the plant model. The plant outputs the gimbal angle, body angle, and angular rate to the scope for evaluation.
+      </p>
+
+      <p>
+        This structure made it possible to test how the controller affected vehicle attitude response while also keeping the simulation closer to a real actuator system, where the motor gimbal cannot move infinitely fast or beyond its physical range.
+      </p>
+
+      <div class="button-row">
+        <a class="button primary" href="../Thrust_Vectoring_Rocket_Simulink_Block_Diagram.pdf" target="_blank">View Simulink Block Diagram</a>
+      </div>
+
+      <iframe class="pdf-frame" src="../Thrust_Vectoring_Rocket_Simulink_Block_Diagram.pdf"></iframe>
+      <p class="image-caption">
+        Simulink block diagram for the thrust-vectoring body-angle simulation.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Simulation Output</h2>
+      <p>
+        The scope output shows the simulated response for one damping configuration. The plotted signals show the gimbal angle, body angle, and angular rate changing over time as the controller works to reduce the initial body-angle error and bring the system toward a stable response.
+      </p>
+
+      <p>
+        This output helped evaluate whether the controller was producing a reasonable damped response. Instead of allowing the rocket body angle to diverge or oscillate indefinitely, the simulation shows the response settling toward equilibrium as the control action reduces the angular motion.
+      </p>
+
+      <div class="button-row">
+        <a class="button primary" href="../Thrust_Vectoring_Rocket_Simulink_Scope_Output.pdf" target="_blank">View Simulink Scope Output</a>
+      </div>
+
+      <iframe class="pdf-frame" src="../Thrust_Vectoring_Rocket_Simulink_Scope_Output.pdf"></iframe>
+      <p class="image-caption">
+        Scope output from one damping configuration showing the simulated thrust-vectoring response.
       </p>
     </section>
 
     <section class="container">
       <h2>Technical Approach</h2>
+      <p>
+        The project began with a simplified rotational model of a thrust-vectoring rocket. The body angle and angular rate were treated as the main feedback states, while the gimbal angle acted as the control input that changes the thrust direction and creates a restoring moment.
+      </p>
+
+      <p>
+        I used feedback control to compare the commanded body angle and angular rate against the simulated response. The controller then generated a commanded gimbal angle, which was limited by actuator angle and rate constraints before being applied to the plant model. This allowed the simulation to represent both control logic and basic actuator behavior.
+      </p>
+
       <div class="grid">
         <div class="card">
-          <h3>Inputs</h3>
+          <h3>Control Model</h3>
           <ul>
-            <li>IMU orientation and angular rate data</li>
-            <li>Microcontroller input/output signals</li>
-            <li>Servo command limits</li>
-            <li>Desired attitude or neutral position</li>
+            <li>Modeled body-angle error and angular-rate error</li>
+            <li>Used proportional and derivative feedback concepts</li>
+            <li>Generated a commanded motor gimbal angle</li>
+            <li>Included angle and rate limiting before the plant</li>
+            <li>Observed body-angle response using Simulink scope outputs</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Outputs</h3>
+          <h3>Simulation Focus</h3>
           <ul>
-            <li>Servo deflection commands</li>
-            <li>Basic sensor-to-actuator response</li>
-            <li>Initial feedback control behavior</li>
-            <li>Lessons for future TVC testbed development</li>
+            <li>Studied how damping affects rocket attitude response</li>
+            <li>Connected controller gains to closed-loop behavior</li>
+            <li>Evaluated overshoot, settling behavior, and angular-rate response</li>
+            <li>Used Simulink to visualize signal flow and system response</li>
+            <li>Practiced translating control theory into a working simulation</li>
           </ul>
         </div>
       </div>
@@ -239,26 +333,60 @@
 
     <section class="container">
       <h2>Skills Used and Developed</h2>
+
       <div class="grid">
         <div class="card">
           <h3>Technical Skills</h3>
           <ul>
-            <li>Python or MicroPython programming</li>
-            <li>IMU sensor integration</li>
-            <li>Servo control</li>
-            <li>Feedback control concepts</li>
-            <li>Actuator limits and command saturation awareness</li>
+            <li>Control systems</li>
+            <li>Feedback control</li>
+            <li>Proportional and derivative control</li>
+            <li>Rocket rotational dynamics</li>
+            <li>Simulink block diagram modeling</li>
+            <li>Actuator angle and rate limiting</li>
+            <li>Time-response interpretation</li>
           </ul>
         </div>
 
         <div class="card">
           <h3>Engineering Skills</h3>
           <ul>
-            <li>Hardware troubleshooting</li>
+            <li>Simulation debugging</li>
+            <li>Controller tuning</li>
+            <li>System modeling</li>
+            <li>Technical visualization</li>
             <li>Iterative testing</li>
-            <li>System-level thinking</li>
-            <li>Technical documentation</li>
-            <li>Rocket attitude control fundamentals</li>
+            <li>Connecting theory to implementation</li>
+            <li>Documenting control architecture</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Selected Contributions</h2>
+      <p>
+        This project demonstrates my ability to take a controls concept and build a working simulation around it. I created a Simulink architecture that connected commanded attitude states, feedback error calculations, controller logic, actuator constraints, and a plant model into a complete body-angle response simulation.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Simulation Development</h3>
+          <ul>
+            <li>Built the Simulink control architecture for body-angle stabilization</li>
+            <li>Included gimbal angle and rate limiting to represent actuator constraints</li>
+            <li>Generated scope outputs to evaluate damping and settling behavior</li>
+            <li>Used simulation results to assess control response quality</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Controls Analysis</h3>
+          <ul>
+            <li>Studied proportional and derivative control behavior</li>
+            <li>Connected controller gains to rocket attitude response</li>
+            <li>Analyzed damping, overshoot, and settling trends</li>
+            <li>Practiced closed-loop thinking for aerospace control problems</li>
           </ul>
         </div>
       </div>
@@ -267,14 +395,18 @@
     <section class="container">
       <h2>What I Learned</h2>
       <p>
-        This project helped me better understand how guidance and control concepts connect to physical hardware. It also showed the importance of filtering noisy sensor data, respecting actuator limits, and building simple test cases before moving toward more advanced control laws.
+        This project helped me better understand how control theory applies to rocket attitude stabilization. Building the model in Simulink made the relationship between commanded angle, body response, controller output, actuator limits, and plant dynamics much more visible.
+      </p>
+
+      <p>
+        I also learned that a controller may look reasonable mathematically but still behave poorly if actuator limits, initial conditions, or gain values are not handled carefully. The project gave me more practice interpreting simulation plots and using those plots to improve the control design.
       </p>
     </section>
 
     <section class="container">
       <h2>Future Improvements</h2>
       <p>
-        Future work could include implementing a complementary filter or Kalman filter, adding PID control, logging sensor data, improving the mechanical TVC mount, and developing a safer bench-test procedure before any flight-related testing.
+        Future improvements could include expanding the plant model to include changing mass properties, thrust variation over the motor burn, aerodynamic moments, sensor noise, actuator dynamics, and a more complete six-degree-of-freedom rocket simulation. I would also like to compare multiple controller configurations and document the effect of each gain set on damping ratio, settling time, and overshoot.
       </p>
     </section>
   </main>
