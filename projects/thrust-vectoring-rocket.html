@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thrust-Vectoring Rocket Project | Ian Merriman</title>
+  <title>Project BlueSpear | Ian Merriman</title>
 
   <style>
     :root {
@@ -165,6 +165,13 @@
       text-align: center;
     }
 
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 1.5rem 0;
@@ -197,113 +204,192 @@
 
   <main>
     <section class="project-hero container">
-      <span class="badge">Controls | Simulink | Thrust Vectoring | Rocket Dynamics</span>
-      <h1>Thrust-Vectoring Rocket Project</h1>
+      <span class="badge">Project BlueSpear | Navigation Team Lead | Trajectory Simulation | 6DOF Modeling</span>
+      <h1>Project BlueSpear</h1>
       <p class="lead">
-        A controls-focused rocket simulation project exploring how thrust vectoring can be used to stabilize a rocket’s body angle using feedback control, actuator limits, and simplified rotational dynamics.
+        A long-term high-altitude rocket project focused on developing a detailed trajectory simulation capability. My main role is serving as Navigation Team Lead, where I direct the team responsible for modeling the vehicle trajectory and producing simulation data for other project teams.
       </p>
 
       <div class="tag-list">
-        <span class="tag">Control Systems</span>
-        <span class="tag">Simulink</span>
+        <span class="tag">Navigation Lead</span>
+        <span class="tag">Trajectory Simulation</span>
+        <span class="tag">3DOF Modeling</span>
+        <span class="tag">6DOF Development</span>
         <span class="tag">MATLAB</span>
-        <span class="tag">PD Control</span>
-        <span class="tag">Rocket Dynamics</span>
+        <span class="tag">Mission Design</span>
       </div>
     </section>
 
     <section class="container">
       <h2>Project Overview</h2>
       <p>
-        This project focused on developing a simplified thrust-vectoring rocket model and using feedback control to stabilize the vehicle body angle. The goal was to connect control theory to a practical aerospace application by modeling how a gimbaled motor can generate corrective torque and reduce angular motion over time.
+        Project BlueSpear is a long-term student aerospace project focused on developing a high-altitude rocket system. Within the project, the Navigation team is responsible for creating the vehicle trajectory model and generating simulation data that can inform decisions made by the structures, propulsion, aerodynamics, controls, and recovery teams.
       </p>
 
       <p>
-        I used MATLAB and Simulink to build the control architecture, test controller behavior, and observe how the simulated rocket responded under different damping configurations. This project helped me practice modeling, controller tuning, block diagram development, and interpreting time-response behavior from simulation outputs.
+        Our long-term goal is to develop a highly detailed six-degree-of-freedom trajectory model of the vehicle. This model will eventually be used to study the vehicle’s motion, flight environment, performance, and sensitivity to design changes. We are currently starting with a simpler three-degree-of-freedom trajectory model as a foundation before expanding into a higher-fidelity simulation.
       </p>
     </section>
 
     <section class="container">
-      <h2>My Role</h2>
+      <h2>My Role: Navigation Team Lead</h2>
       <p>
-        I developed the simulation structure for the body-angle control problem, created the Simulink block diagram, and studied how feedback gains affected the system response. The model used a commanded body angle and angular rate, compared them against the simulated vehicle response, and used the resulting errors to drive a controller.
+        My main contribution to Project BlueSpear is serving as the Navigation Team Lead. In this role, I help direct the team responsible for developing the rocket trajectory simulation. This includes defining the simulation approach, organizing technical tasks, helping guide model development, reviewing outputs, and making sure our work produces useful data for the rest of the project.
       </p>
 
       <p>
-        I also worked through the control-system analysis behind the model, including proportional and derivative control behavior, closed-loop response, damping behavior, and how actuator limits affect the commanded gimbal angle.
+        The Navigation team’s work is important because trajectory data affects many other design decisions. Predicted altitude, velocity, acceleration, dynamic pressure, flight angles, and position history can influence propulsion sizing, structural loading, aerodynamic design, recovery planning, and safety analysis.
       </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Leadership Responsibilities</h3>
+          <ul>
+            <li>Directing the team developing the vehicle trajectory model</li>
+            <li>Breaking the simulation effort into manageable technical tasks</li>
+            <li>Helping guide the transition from a 3DOF model toward a 6DOF model</li>
+            <li>Coordinating simulation outputs for use by other project teams</li>
+            <li>Reviewing plots and results to identify issues or next steps</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Technical Responsibilities</h3>
+          <ul>
+            <li>Developing trajectory simulation logic</li>
+            <li>Modeling gravity, atmosphere, thrust, mass, drag, and vehicle motion</li>
+            <li>Interpreting altitude, velocity, acceleration, dynamic pressure, and angle outputs</li>
+            <li>Planning future model upgrades toward higher-fidelity 6DOF simulation</li>
+            <li>Using simulation data to support design decision-making</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="container">
-      <h2>Simulink Control Architecture</h2>
+      <h2>Current 3DOF Simulation Model</h2>
       <p>
-        The Simulink model uses body-angle and angular-rate commands, calculates the corresponding errors, sends those errors into a controller, then passes the commanded gimbal angle through an angle limiter and rate limiter before it enters the plant model. The plant outputs the gimbal angle, body angle, and angular rate for evaluation.
+        The current Navigation team simulation is a three-degree-of-freedom trajectory model. It is intended to serve as a baseline model that can be expanded as the vehicle design matures. The current model includes gravity, a simple atmosphere, drag, and time-dependent thrust and mass profiles.
       </p>
 
       <p>
-        This structure made it possible to test how the controller affected vehicle attitude response while also keeping the simulation closer to a real actuator system, where the motor gimbal cannot move infinitely fast or beyond its physical range.
+        Since the final Project BlueSpear motor design has not yet been finalized, the current simulation uses the thrust profile of the Cesaroni 40960O8000-P motor from ThrustCurve.org as a stand-in. This allows the team to begin testing the trajectory model structure and generating preliminary outputs before the final propulsion configuration is selected.
       </p>
 
-      <img
-        class="project-image"
-        src="../images/Thrust_Vectoring_Rocket_Simulink_Block_Diagram.png"
-        alt="Simulink block diagram for the thrust-vectoring rocket body-angle simulation"
-      />
-      <p class="image-caption">
-        Simulink block diagram for the thrust-vectoring body-angle simulation.
+      <p>
+        For the current simulation output shown below, the vehicle is modeled as a sphere with a drag coefficient of 0.5, a radius of 0.05 meters, and an initial wet mass of 40 kilograms. These simplified assumptions allow the team to test the numerical framework before adding more detailed geometry, aerodynamics, mass properties, and attitude dynamics.
       </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Current Model Inputs</h3>
+          <ul>
+            <li>Three-degree-of-freedom trajectory model</li>
+            <li>Gravity model</li>
+            <li>Simple atmospheric model</li>
+            <li>Time-dependent thrust profile</li>
+            <li>Time-dependent mass profile</li>
+            <li>Drag modeled using a simplified spherical vehicle approximation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Current Vehicle Assumptions</h3>
+          <ul>
+            <li>Vehicle modeled as a sphere</li>
+            <li>Drag coefficient: 0.5</li>
+            <li>Radius: 0.05 m</li>
+            <li>Initial wet mass: 40 kg</li>
+            <li>Stand-in motor: Cesaroni 40960O8000-P</li>
+            <li>Motor data source: ThrustCurve.org</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="container">
-      <h2>Simulation Output</h2>
+      <h2>Trajectory Simulation Outputs</h2>
       <p>
-        The scope output shows the simulated response for one damping configuration. The plotted signals show the gimbal angle, body angle, and angular rate changing over time as the controller works to reduce the initial body-angle error and bring the system toward a stable response.
+        The following plots show the current output of the Navigation team’s 3DOF trajectory model. These plots are used to evaluate the simulated flight profile and understand how the vehicle state changes over time. As the simulation matures, these outputs will help the team compare design iterations and provide useful trajectory data to other subsystems.
       </p>
 
-      <p>
-        This output helped evaluate whether the controller was producing a reasonable damped response. Instead of allowing the rocket body angle to diverge or oscillate indefinitely, the simulation shows the response settling toward equilibrium as the control action reduces the angular motion.
-      </p>
+      <div class="image-grid">
+        <div>
+          <img class="project-image" src="../images/AltitudeTime.png" alt="Altitude above mean equator versus time for the Project BlueSpear 3DOF simulation" />
+          <p class="image-caption">
+            Altitude history from the current 3DOF trajectory simulation.
+          </p>
+        </div>
 
-      <img
-        class="project-image"
-        src="../images/Thrust_Vectoring_Rocket_Simulink_Scope_Output.png"
-        alt="Scope output from the thrust-vectoring rocket simulation"
-      />
-      <p class="image-caption">
-        Scope output from one damping configuration showing the simulated thrust-vectoring response.
-      </p>
+        <div>
+          <img class="project-image" src="../images/VelocityTime.png" alt="Velocity components and relative speed versus time for the Project BlueSpear 3DOF simulation" />
+          <p class="image-caption">
+            Velocity component history showing east, north, zenith, and relative speed over time.
+          </p>
+        </div>
+
+        <div>
+          <img class="project-image" src="../images/AccelerationTime.png" alt="Acceleration components and total acceleration versus time for the Project BlueSpear 3DOF simulation" />
+          <p class="image-caption">
+            Acceleration component history showing east, north, zenith, and total acceleration over time.
+          </p>
+        </div>
+
+        <div>
+          <img class="project-image" src="../images/PositionTime.png" alt="Position displacement components versus time for the Project BlueSpear 3DOF simulation" />
+          <p class="image-caption">
+            Position displacement history showing east, north, zenith, and total linear displacement.
+          </p>
+        </div>
+
+        <div>
+          <img class="project-image" src="../images/PressureTime.png" alt="Dynamic pressure versus time for the Project BlueSpear 3DOF simulation" />
+          <p class="image-caption">
+            Dynamic pressure history used to understand aerodynamic loading trends during flight.
+          </p>
+        </div>
+
+        <div>
+          <img class="project-image" src="../images/AnglesTime.png" alt="Azimuth and elevation versus time for the Project BlueSpear 3DOF simulation" />
+          <p class="image-caption">
+            Azimuth and elevation history from the simulated trajectory.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="container">
       <h2>Technical Approach</h2>
       <p>
-        The project began with a simplified rotational model of a thrust-vectoring rocket. The body angle and angular rate were treated as the main feedback states, while the gimbal angle acted as the control input that changes the thrust direction and creates a restoring moment.
+        The current technical approach is to begin with a simplified but functional trajectory model, verify that the core logic behaves reasonably, and then gradually increase model fidelity. Starting with a 3DOF model allows the team to focus on translational motion, thrust, mass variation, drag, gravity, and atmosphere modeling before adding attitude dynamics and full six-degree-of-freedom behavior.
       </p>
 
       <p>
-        I used feedback control to compare the commanded body angle and angular rate against the simulated response. The controller then generated a commanded gimbal angle, which was limited by actuator angle and rate constraints before being applied to the plant model. This allowed the simulation to represent both control logic and basic actuator behavior.
+        The long-term 6DOF model will require additional development, including vehicle attitude states, rotational equations of motion, aerodynamic moments, mass moment of inertia, center-of-gravity tracking, control inputs, and more detailed environmental models. The current 3DOF model gives the team a working base that can be validated and expanded over time.
       </p>
 
       <div class="grid">
         <div class="card">
-          <h3>Control Model</h3>
+          <h3>Current 3DOF Focus</h3>
           <ul>
-            <li>Modeled body-angle error and angular-rate error</li>
-            <li>Used proportional and derivative feedback concepts</li>
-            <li>Generated a commanded motor gimbal angle</li>
-            <li>Included angle and rate limiting before the plant</li>
-            <li>Observed body-angle response using Simulink outputs</li>
+            <li>Translational equations of motion</li>
+            <li>Time-varying thrust profile</li>
+            <li>Time-varying mass profile</li>
+            <li>Simple atmospheric density model</li>
+            <li>Drag force estimation</li>
+            <li>Altitude, velocity, acceleration, and dynamic pressure outputs</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Simulation Focus</h3>
+          <h3>Future 6DOF Expansion</h3>
           <ul>
-            <li>Studied how damping affects rocket attitude response</li>
-            <li>Connected controller gains to closed-loop behavior</li>
-            <li>Evaluated overshoot, settling behavior, and angular-rate response</li>
-            <li>Used Simulink to visualize signal flow and system response</li>
-            <li>Practiced translating control theory into a working simulation</li>
+            <li>Vehicle attitude dynamics</li>
+            <li>Rotational equations of motion</li>
+            <li>Aerodynamic force and moment modeling</li>
+            <li>Inertia tensor and center-of-gravity tracking</li>
+            <li>Control input modeling</li>
+            <li>Higher-fidelity trajectory and design sensitivity studies</li>
           </ul>
         </div>
       </div>
@@ -316,26 +402,26 @@
         <div class="card">
           <h3>Technical Skills</h3>
           <ul>
-            <li>Control systems</li>
-            <li>Feedback control</li>
-            <li>Proportional and derivative control</li>
-            <li>Rocket rotational dynamics</li>
-            <li>Simulink block diagram modeling</li>
-            <li>Actuator angle and rate limiting</li>
-            <li>Time-response interpretation</li>
+            <li>Trajectory simulation</li>
+            <li>Three-degree-of-freedom modeling</li>
+            <li>Six-degree-of-freedom model planning</li>
+            <li>Equations of motion development</li>
+            <li>Gravity, atmosphere, thrust, mass, and drag modeling</li>
+            <li>Dynamic pressure analysis</li>
+            <li>Simulation plotting and interpretation</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Engineering Skills</h3>
+          <h3>Leadership and Engineering Skills</h3>
           <ul>
-            <li>Simulation debugging</li>
-            <li>Controller tuning</li>
-            <li>System modeling</li>
-            <li>Technical visualization</li>
-            <li>Iterative testing</li>
-            <li>Connecting theory to implementation</li>
-            <li>Documenting control architecture</li>
+            <li>Navigation team leadership</li>
+            <li>Technical task planning</li>
+            <li>Simulation architecture planning</li>
+            <li>Subsystem communication</li>
+            <li>Design-data support for other teams</li>
+            <li>Iterative model development</li>
+            <li>Technical documentation and review</li>
           </ul>
         </div>
       </div>
@@ -344,27 +430,27 @@
     <section class="container">
       <h2>Selected Contributions</h2>
       <p>
-        This project demonstrates my ability to take a controls concept and build a working simulation around it. I created a Simulink architecture that connected commanded attitude states, feedback error calculations, controller logic, actuator constraints, and a plant model into a complete body-angle response simulation.
+        My Project BlueSpear work demonstrates both technical and leadership experience. As Navigation Team Lead, I am helping guide the development of a trajectory simulation capability that the larger project can use to support design decisions. The current 3DOF model is an important first step toward a more detailed 6DOF simulation.
       </p>
 
       <div class="grid">
         <div class="card">
-          <h3>Simulation Development</h3>
+          <h3>Navigation Team Contributions</h3>
           <ul>
-            <li>Built the Simulink control architecture for body-angle stabilization</li>
-            <li>Included gimbal angle and rate limiting to represent actuator constraints</li>
-            <li>Generated scope outputs to evaluate damping and settling behavior</li>
-            <li>Used simulation results to assess control response quality</li>
+            <li>Directed early trajectory simulation development</li>
+            <li>Helped define the team’s modeling path from 3DOF to 6DOF</li>
+            <li>Organized simulation outputs for review and communication</li>
+            <li>Connected trajectory modeling work to broader vehicle design needs</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Controls Analysis</h3>
+          <h3>Simulation Contributions</h3>
           <ul>
-            <li>Studied proportional and derivative control behavior</li>
-            <li>Connected controller gains to rocket attitude response</li>
-            <li>Analyzed damping, overshoot, and settling trends</li>
-            <li>Practiced closed-loop thinking for aerospace control problems</li>
+            <li>Supported development of a baseline 3DOF vehicle trajectory model</li>
+            <li>Incorporated gravity, atmosphere, drag, thrust, and mass variation</li>
+            <li>Used a real thrust profile as a stand-in motor input</li>
+            <li>Generated and interpreted trajectory plots for altitude, velocity, acceleration, pressure, position, and flight angles</li>
           </ul>
         </div>
       </div>
@@ -373,18 +459,18 @@
     <section class="container">
       <h2>What I Learned</h2>
       <p>
-        This project helped me better understand how control theory applies to rocket attitude stabilization. Building the model in Simulink made the relationship between commanded angle, body response, controller output, actuator limits, and plant dynamics much more visible.
+        This project has reinforced that trajectory modeling is not just about predicting where the vehicle goes. The simulation must provide useful engineering data that other teams can use to make design decisions. Altitude, velocity, dynamic pressure, acceleration, and flight angle outputs can all influence subsystem requirements and vehicle design tradeoffs.
       </p>
 
       <p>
-        I also learned that a controller may look reasonable mathematically but still behave poorly if actuator limits, initial conditions, or gain values are not handled carefully. The project gave me more practice interpreting simulation plots and using those plots to improve the control design.
+        It has also shown me the value of starting simple and building up model fidelity over time. A 3DOF simulation provides a manageable first step, while the planned 6DOF model will require a deeper treatment of vehicle attitude, aerodynamic moments, mass properties, and rotational dynamics.
       </p>
     </section>
 
     <section class="container">
       <h2>Future Improvements</h2>
       <p>
-        Future improvements could include expanding the plant model to include changing mass properties, thrust variation over the motor burn, aerodynamic moments, sensor noise, actuator dynamics, and a more complete six-degree-of-freedom rocket simulation. I would also like to compare multiple controller configurations and document the effect of each gain set on damping ratio, settling time, and overshoot.
+        Future Navigation team work will focus on expanding the model from the current 3DOF baseline toward a detailed 6DOF simulation. Planned improvements include better atmospheric modeling, higher-fidelity aerodynamic properties, finalized motor data, changing center of gravity, inertia tensor modeling, attitude dynamics, aerodynamic moments, control inputs, and more detailed validation of the simulation results.
       </p>
     </section>
   </main>
